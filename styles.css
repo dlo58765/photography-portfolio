@@ -33,7 +33,7 @@ a {
   padding: 24px 24px 64px;
   background:
     linear-gradient(90deg, rgba(5, 5, 5, 0.85), rgba(5, 5, 5, 0.55)),
-    url("photos/hero.jpg") center center / contain no-repeat;
+    url("hero.jpg") center center / contain no-repeat;
 }
 
 .nav {
