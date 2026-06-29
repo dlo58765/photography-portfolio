@@ -5,12 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RexChen | Photography Portfolio</title>
     <meta name="description" content="A personal portfolio of street, travel and portrait photography by RexChen." />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RexChen | Photography Portfolio" />
+    <meta property="og:description" content="Street, travel and portrait photography — built on light, composition, and the quiet weight of a moment." />
+    <meta property="og:image" content="photos/Top.jpg" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RexChen | Photography Portfolio" />
+    <meta name="twitter:description" content="Street, travel and portrait photography by RexChen." />
+    <meta name="twitter:image" content="photos/Top.jpg" />
+    <meta name="theme-color" content="#0a0a0c" />
+
+    <!-- Favicon (inline SVG — no extra file needed) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230a0a0c'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' font-style='italic' fill='%23c8a96b' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="image" href="photos/Top.jpg" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"><span class="cursor-label">ZOOM</span></div>
+
+    <svg class="grain-svg" xmlns="http://www.w3.org/2000/svg">
+      <filter id="grain-filter">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
+        <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.35 0" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#grain-filter)" />
+    </svg>
+
     <nav class="nav">
       <a class="brand" href="#top">REXCHEN</a>
       <div class="nav-links">
@@ -22,7 +50,7 @@
 
     <main id="top">
       <section class="hero snap-section">
-        <div class="hero-bg" style="background-image: url('Top.jpg');"></div>
+        <div class="hero-bg" style="background-image: url('photos/Top.jpg');"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content reveal">
           <p class="eyebrow">PHOTOGRAPHY PORTFOLIO · 2026</p>
@@ -66,41 +94,85 @@
       </section>
 
       <section class="work snap-section" data-index="01">
-        <div class="work-image" style="background-image: url('portrait.jpg');"></div>
+        <div class="work-image" data-src="photos/portrait.jpg" style="background-image: url('photos/portrait.jpg');"></div>
         <div class="work-caption reveal">
           <span class="work-index">01 / 04</span>
           <h3 class="display-sm">Quiet Portrait</h3>
           <p>A study of expression, light and detail in balance — looking for the full story of a face in the smallest of breaths.</p>
+          <dl class="exif">
+            <div><dt>Camera</dt><dd>Sony A7 V</dd></div>
+            <div><dt>Lens</dt><dd>85mm f/1.4 GM</dd></div>
+            <div><dt>Aperture</dt><dd>f/1.8</dd></div>
+            <div><dt>Shutter</dt><dd>1/250s</dd></div>
+            <div><dt>ISO</dt><dd>400</dd></div>
+            <div><dt>Focal</dt><dd>85mm</dd></div>
+            <div><dt>Mode</dt><dd>Manual</dd></div>
+            <div><dt>WB</dt><dd>5200K</dd></div>
+            <div><dt>Format</dt><dd>RAW</dd></div>
+          </dl>
           <span class="work-meta">PORTRAIT · 2025</span>
         </div>
       </section>
 
       <section class="work snap-section reverse" data-index="02">
-        <div class="work-image" style="background-image: url('travel.jpg');"></div>
+        <div class="work-image" data-src="photos/travel.jpg" style="background-image: url('photos/travel.jpg');"></div>
         <div class="work-caption reveal">
           <span class="work-index">02 / 04</span>
           <h3 class="display-sm">Travel Frame</h3>
           <p>Fragments and landscapes from the road, layered into something honest. A search for your own quiet conversation inside an unfamiliar city.</p>
+          <dl class="exif">
+            <div><dt>Camera</dt><dd>Sony A7 V</dd></div>
+            <div><dt>Lens</dt><dd>24-70mm f/2.8 GM II</dd></div>
+            <div><dt>Aperture</dt><dd>f/8</dd></div>
+            <div><dt>Shutter</dt><dd>1/500s</dd></div>
+            <div><dt>ISO</dt><dd>200</dd></div>
+            <div><dt>Focal</dt><dd>35mm</dd></div>
+            <div><dt>Mode</dt><dd>Manual</dd></div>
+            <div><dt>WB</dt><dd>5600K</dd></div>
+            <div><dt>Format</dt><dd>RAW</dd></div>
+          </dl>
           <span class="work-meta">TRAVEL · 2025</span>
         </div>
       </section>
 
       <section class="work snap-section" data-index="03">
-        <div class="work-image" style="background-image: url('city.jpg');"></div>
+        <div class="work-image" data-src="photos/city.jpg" style="background-image: url('photos/city.jpg');"></div>
         <div class="work-caption reveal">
           <span class="work-index">03 / 04</span>
           <h3 class="display-sm">Urban Silence</h3>
           <p>Stillness inside the city — the small shifts between light and shadow. Between concrete and glass there are always moments no one notices.</p>
+          <dl class="exif">
+            <div><dt>Camera</dt><dd>Sony A7 V</dd></div>
+            <div><dt>Lens</dt><dd>35mm f/1.4 GM</dd></div>
+            <div><dt>Aperture</dt><dd>f/4</dd></div>
+            <div><dt>Shutter</dt><dd>1/320s</dd></div>
+            <div><dt>ISO</dt><dd>800</dd></div>
+            <div><dt>Focal</dt><dd>35mm</dd></div>
+            <div><dt>Mode</dt><dd>Manual</dd></div>
+            <div><dt>WB</dt><dd>4800K</dd></div>
+            <div><dt>Format</dt><dd>RAW</dd></div>
+          </dl>
           <span class="work-meta">STREET · 2024</span>
         </div>
       </section>
 
       <section class="work snap-section reverse" data-index="04">
-        <div class="work-image" style="background-image: url('hero.jpg');"></div>
+        <div class="work-image" data-src="photos/hero.jpg" style="background-image: url('photos/hero.jpg');"></div>
         <div class="work-caption reveal">
           <span class="work-index">04 / 04</span>
           <h3 class="display-sm">Natural Study</h3>
           <p>Drawing stillness and weight from the natural world. Every shaft of light is evidence of time passing through.</p>
+          <dl class="exif">
+            <div><dt>Camera</dt><dd>Sony A7 V</dd></div>
+            <div><dt>Lens</dt><dd>16-35mm f/2.8 GM II</dd></div>
+            <div><dt>Aperture</dt><dd>f/11</dd></div>
+            <div><dt>Shutter</dt><dd>1/160s</dd></div>
+            <div><dt>ISO</dt><dd>100</dd></div>
+            <div><dt>Focal</dt><dd>24mm</dd></div>
+            <div><dt>Mode</dt><dd>Manual</dd></div>
+            <div><dt>WB</dt><dd>5800K</dd></div>
+            <div><dt>Format</dt><dd>RAW</dd></div>
+          </dl>
           <span class="work-meta">NATURE · 2026</span>
         </div>
       </section>
@@ -123,9 +195,69 @@
       <span class="indicator-current">01</span>
       <span class="indicator-divider"></span>
       <span class="indicator-total">09</span>
+      <div class="indicator-dots" role="tablist" aria-label="Page navigation"></div>
     </div>
 
     <script>
+      // ===== Split-text animation for display headings =====
+      document.querySelectorAll('.display, .display-sm').forEach((heading) => {
+        let charIndex = 0;
+        const walk = (node) => {
+          const children = Array.from(node.childNodes);
+          children.forEach((child) => {
+            if (child.nodeType === Node.TEXT_NODE) {
+              const frag = document.createDocumentFragment();
+              const words = child.textContent.split(/(\s+)/);
+              words.forEach((word) => {
+                if (/^\s+$/.test(word)) { frag.appendChild(document.createTextNode(word)); return; }
+                const wordSpan = document.createElement('span');
+                wordSpan.className = 'word';
+                Array.from(word).forEach((ch) => {
+                  const inner = document.createElement('span');
+                  inner.className = 'char';
+                  inner.style.setProperty('--char-i', charIndex++);
+                  inner.textContent = ch;
+                  wordSpan.appendChild(inner);
+                });
+                frag.appendChild(wordSpan);
+              });
+              node.replaceChild(frag, child);
+            } else if (child.nodeType === Node.ELEMENT_NODE && child.tagName !== 'BR') {
+              walk(child);
+            }
+          });
+        };
+        walk(heading);
+        heading.classList.add('split');
+      });
+
+      // ===== Custom cursor =====
+      const cursorDot = document.querySelector('.cursor-dot');
+      const cursorRing = document.querySelector('.cursor-ring');
+      let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+      let ringX = mouseX, ringY = mouseY;
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX; mouseY = e.clientY;
+        cursorDot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+      });
+      function animateRing() {
+        ringX += (mouseX - ringX) * 0.15;
+        ringY += (mouseY - ringY) * 0.15;
+        cursorRing.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)`;
+        requestAnimationFrame(animateRing);
+      }
+      animateRing();
+      document.querySelectorAll('a, button, .work-image, .btn').forEach((el) => {
+        const isImage = el.classList.contains('work-image');
+        el.addEventListener('mouseenter', () => {
+          cursorRing.classList.add('is-hover');
+          if (isImage) cursorRing.classList.add('is-view');
+        });
+        el.addEventListener('mouseleave', () => {
+          cursorRing.classList.remove('is-hover', 'is-view');
+        });
+      });
+
       const mainElement = document.querySelector('main');
       const sections = Array.from(document.querySelectorAll('.snap-section'));
       const indicatorCurrent = document.querySelector('.indicator-current');
@@ -134,6 +266,22 @@
       let isScrolling = false;
 
       indicatorTotal.textContent = String(sections.length).padStart(2, '0');
+
+      // Build clickable page dots
+      const dotsContainer = document.querySelector('.indicator-dots');
+      sections.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'indicator-dot';
+        dot.setAttribute('aria-label', `Go to section ${i + 1}`);
+        dot.setAttribute('role', 'tab');
+        dot.addEventListener('click', () => smoothScrollTo(i));
+        dotsContainer.appendChild(dot);
+      });
+      function setActiveDot(idx) {
+        dotsContainer.querySelectorAll('.indicator-dot').forEach((d, i) => {
+          d.classList.toggle('is-active', i === idx);
+        });
+      }
 
       function smoothScrollTo(index) {
         if (index < 0 || index >= sections.length) return;
@@ -144,7 +292,50 @@
         }, 800);
       }
 
+      // ===== Hover-zoom on work images (wheel scales the image) =====
+      const workImages = Array.from(document.querySelectorAll('.work-image'));
+      const zoomState = new Map();
+      workImages.forEach((el) => {
+        zoomState.set(el, { scale: 1, x: 50, y: 50 });
+        el.style.transition = 'background-size 0.25s ease, background-position 0.15s ease';
+        el.addEventListener('mousemove', (e) => {
+          const state = zoomState.get(el);
+          if (state.scale <= 1) return;
+          const rect = el.getBoundingClientRect();
+          state.x = ((e.clientX - rect.left) / rect.width) * 100;
+          state.y = ((e.clientY - rect.top) / rect.height) * 100;
+          el.style.backgroundPosition = `${state.x}% ${state.y}%`;
+        });
+        el.addEventListener('mouseleave', () => {
+          const state = zoomState.get(el);
+          state.scale = 1;
+          state.x = 50; state.y = 50;
+          el.style.backgroundSize = 'contain';
+          el.style.backgroundPosition = 'center';
+          el.classList.remove('is-zoomed');
+        });
+      });
+
       mainElement.addEventListener('wheel', (event) => {
+        // If hovering a work image, wheel zooms instead of scrolling pages
+        const hoveredImg = workImages.find((el) => el.matches(':hover'));
+        if (hoveredImg) {
+          event.preventDefault();
+          const state = zoomState.get(hoveredImg);
+          const step = event.deltaY > 0 ? -0.15 : 0.15;
+          state.scale = Math.max(1, Math.min(3.5, state.scale + step));
+          if (state.scale > 1) {
+            hoveredImg.classList.add('is-zoomed');
+            hoveredImg.style.backgroundSize = `${state.scale * 100}%`;
+            hoveredImg.style.backgroundPosition = `${state.x}% ${state.y}%`;
+          } else {
+            hoveredImg.classList.remove('is-zoomed');
+            hoveredImg.style.backgroundSize = 'contain';
+            hoveredImg.style.backgroundPosition = 'center';
+          }
+          return;
+        }
+
         if (isScrolling) {
           event.preventDefault();
           return;
@@ -172,13 +363,39 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const idx = sections.indexOf(entry.target);
-            if (idx >= 0) indicatorCurrent.textContent = String(idx + 1).padStart(2, '0');
+            if (idx >= 0) {
+              indicatorCurrent.textContent = String(idx + 1).padStart(2, '0');
+              setActiveDot(idx);
+            }
             if (idx === 0) nav.classList.remove('nav-scrolled');
             else nav.classList.add('nav-scrolled');
           }
         });
       }, { threshold: 0.5 });
       sections.forEach((s) => indexObserver.observe(s));
+
+      // ===== Touch swipe navigation (mobile) =====
+      let touchStartY = null;
+      let touchStartTime = 0;
+      mainElement.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+        touchStartTime = Date.now();
+      }, { passive: true });
+      mainElement.addEventListener('touchend', (e) => {
+        if (touchStartY === null) return;
+        const touchEndY = e.changedTouches[0].clientY;
+        const deltaY = touchStartY - touchEndY;
+        const deltaTime = Date.now() - touchStartTime;
+        touchStartY = null;
+        // Only treat as a swipe (not a scroll) if fast & strong enough
+        if (Math.abs(deltaY) < 60 || deltaTime > 600) return;
+        if (isScrolling) return;
+        const currentIndex = Math.round(mainElement.scrollTop / window.innerHeight);
+        const targetIndex = deltaY > 0
+          ? Math.min(sections.length - 1, currentIndex + 1)
+          : Math.max(0, currentIndex - 1);
+        if (targetIndex !== currentIndex) smoothScrollTo(targetIndex);
+      }, { passive: true });
     </script>
   </body>
 </html>
