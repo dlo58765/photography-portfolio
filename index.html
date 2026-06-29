@@ -1,106 +1,184 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RexChen | Photography Portfolio</title>
-    <meta name="description" content="正式攝影師風格的個人作品集網站，展示街拍、旅拍與人像作品。" />
+    <meta name="description" content="A personal portfolio of street, travel and portrait photography by RexChen." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <nav class="nav">
-        <a class="brand" href="#">REXCHEN</a>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
-
-      <div class="hero-content">
-        <p class="eyebrow">PHOTOGRAPHY PORTFOLIO</p>
-        <h1>Storytelling through light, space, and emotion.</h1>
-        <p>專注於街拍、旅行攝影與人像創作，透過細膩的光線與構圖，呈現真實而有質感的畫面。</p>
-        <a class="btn" href="#portfolio">View Works</a>
+    <nav class="nav">
+      <a class="brand" href="#top">REXCHEN</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
       </div>
-    </header>
+    </nav>
 
-    <main>
-      <section id="about" class="section about">
-        <div class="section-heading">
-          <p class="eyebrow">ABOUT</p>
-          <h2>About the Artist</h2>
+    <main id="top">
+      <section class="hero snap-section">
+        <div class="hero-bg" style="background-image: url('photos/Top.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">PHOTOGRAPHY PORTFOLIO · 2026</p>
+          <h1 class="display">
+            Storytelling through<br />
+            <em>light, space</em><br />
+            and emotion.
+          </h1>
+          <p class="lead">A body of work in street, travel and portrait photography — built on light, composition, and the quiet weight of a moment.</p>
+          <a class="btn" href="#portfolio">
+            <span>View Works</span>
+            <span class="btn-arrow">↓</span>
+          </a>
         </div>
-        <div class="about-grid">
-          <div>
+        <div class="scroll-hint">SCROLL</div>
+      </section>
+
+      <section id="about" class="section about snap-section">
+        <div class="about-inner reveal">
+          <p class="eyebrow">ABOUT</p>
+          <h2 class="display-sm">A photographer working between<br /><em>silence and light.</em></h2>
+          <div class="about-body">
             <p>
-              我相信攝影不只是記錄，而是將一個瞬間轉化為值得被長久保存的情感與記憶。作品以簡潔、克制與細節為核心，強調光線與空間的關係。
+              Photography, to me, is less about recording and more about turning a fleeting moment into something worth keeping. My work leans on restraint and detail, on the relationship between light and the space it falls into.
             </p>
-          </div>
-          <div class="about-card">
-            <h3>Focus</h3>
-            <ul>
-              <li>Street Photography</li>
-              <li>Travel Documentary</li>
-              <li>Portrait & Editorial</li>
+            <ul class="focus-list">
+              <li><span>01</span> Street Photography</li>
+              <li><span>02</span> Travel Documentary</li>
+              <li><span>03</span> Portrait &amp; Editorial</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section id="portfolio" class="section">
-        <div class="section-heading">
+      <section id="portfolio" class="section intro snap-section">
+        <div class="reveal intro-inner">
           <p class="eyebrow">PORTFOLIO</p>
-          <h2>Selected Works</h2>
-        </div>
-
-        <div class="gallery-grid">
-          <article class="card">
-            <img src="portrait.jpg" alt="Portrait photography" />
-            <div class="card-content">
-              <h3>Quiet Portrait</h3>
-              <p>人像作品，專注於神情、光影與細節的平衡。</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="travel.jpg" alt="Travel photography" />
-            <div class="card-content">
-              <h3>Travel Frame</h3>
-              <p>旅行中的瞬間與地景，呈現真實且有層次的敘事感。</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="city.jpg" alt="City photography" />
-            <div class="card-content">
-              <h3>Urban Silence</h3>
-              <p>城市中的靜態片段，捕捉光與陰影的微妙變化。</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="hero.jpg" alt="Nature photography" />
-            <div class="card-content">
-              <h3>Natural Study</h3>
-              <p>從自然景觀中提取穩定、沉靜與高級感的氣質。</p>
-            </div>
-          </article>
+          <h2 class="display">Selected<br /><em>Works.</em></h2>
+          <p class="lead">Four selected pieces from 2024–2026, presented frame by frame.</p>
         </div>
       </section>
 
-      <section id="contact" class="section contact">
-        <div class="section-heading">
-          <p class="eyebrow">CONTACT</p>
-          <h2>Get in Touch</h2>
+      <section class="work snap-section" data-index="01">
+        <div class="work-image" style="background-image: url('photos/portrait.jpg');"></div>
+        <div class="work-caption reveal">
+          <span class="work-index">01 / 04</span>
+          <h3 class="display-sm">Quiet Portrait</h3>
+          <p>A study of expression, light and detail in balance — looking for the full story of a face in the smallest of breaths.</p>
+          <span class="work-meta">PORTRAIT · 2025</span>
         </div>
-        <p>若你有攝影合作、作品委託或訪談邀請，歡迎與我聯絡。</p>
-        <a class="btn" href="mailto:dlo58765@gmail.com">Email Me</a>
+      </section>
+
+      <section class="work snap-section reverse" data-index="02">
+        <div class="work-image" style="background-image: url('photos/travel.jpg');"></div>
+        <div class="work-caption reveal">
+          <span class="work-index">02 / 04</span>
+          <h3 class="display-sm">Travel Frame</h3>
+          <p>Fragments and landscapes from the road, layered into something honest. A search for your own quiet conversation inside an unfamiliar city.</p>
+          <span class="work-meta">TRAVEL · 2025</span>
+        </div>
+      </section>
+
+      <section class="work snap-section" data-index="03">
+        <div class="work-image" style="background-image: url('photos/city.jpg');"></div>
+        <div class="work-caption reveal">
+          <span class="work-index">03 / 04</span>
+          <h3 class="display-sm">Urban Silence</h3>
+          <p>Stillness inside the city — the small shifts between light and shadow. Between concrete and glass there are always moments no one notices.</p>
+          <span class="work-meta">STREET · 2024</span>
+        </div>
+      </section>
+
+      <section class="work snap-section reverse" data-index="04">
+        <div class="work-image" style="background-image: url('photos/hero.jpg');"></div>
+        <div class="work-caption reveal">
+          <span class="work-index">04 / 04</span>
+          <h3 class="display-sm">Natural Study</h3>
+          <p>Drawing stillness and weight from the natural world. Every shaft of light is evidence of time passing through.</p>
+          <span class="work-meta">NATURE · 2026</span>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact snap-section">
+        <div class="contact-inner reveal">
+          <p class="eyebrow">CONTACT</p>
+          <h2 class="display">Let's create<br /><em>something quiet.</em></h2>
+          <p class="lead">For collaborations, commissions or editorial features, I'd love to hear from you.</p>
+          <a class="btn btn-large" href="mailto:dlo58765@gmail.com">
+            <span>dlo58765@gmail.com</span>
+            <span class="btn-arrow">→</span>
+          </a>
+          <footer class="footer">© 2026 RexChen · All rights reserved</footer>
+        </div>
       </section>
     </main>
+
+    <div class="page-indicator">
+      <span class="indicator-current">01</span>
+      <span class="indicator-divider"></span>
+      <span class="indicator-total">09</span>
+    </div>
+
+    <script>
+      const mainElement = document.querySelector('main');
+      const sections = Array.from(document.querySelectorAll('.snap-section'));
+      const indicatorCurrent = document.querySelector('.indicator-current');
+      const indicatorTotal = document.querySelector('.indicator-total');
+      const nav = document.querySelector('.nav');
+      let isScrolling = false;
+
+      indicatorTotal.textContent = String(sections.length).padStart(2, '0');
+
+      function smoothScrollTo(index) {
+        if (index < 0 || index >= sections.length) return;
+        isScrolling = true;
+        mainElement.scrollTo({ top: sections[index].offsetTop, behavior: 'smooth' });
+        window.setTimeout(() => {
+          isScrolling = false;
+        }, 800);
+      }
+
+      mainElement.addEventListener('wheel', (event) => {
+        if (isScrolling) {
+          event.preventDefault();
+          return;
+        }
+        const delta = event.deltaY;
+        if (Math.abs(delta) < 10) return;
+        const currentIndex = Math.round(mainElement.scrollTop / window.innerHeight);
+        let targetIndex = currentIndex;
+        if (delta > 0) targetIndex = Math.min(sections.length - 1, currentIndex + 1);
+        else targetIndex = Math.max(0, currentIndex - 1);
+        if (targetIndex !== currentIndex) {
+          event.preventDefault();
+          smoothScrollTo(targetIndex);
+        }
+      }, { passive: false });
+
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('is-visible');
+        });
+      }, { threshold: 0.25 });
+      document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+      const indexObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const idx = sections.indexOf(entry.target);
+            if (idx >= 0) indicatorCurrent.textContent = String(idx + 1).padStart(2, '0');
+            if (idx === 0) nav.classList.remove('nav-scrolled');
+            else nav.classList.add('nav-scrolled');
+          }
+        });
+      }, { threshold: 0.5 });
+      sections.forEach((s) => indexObserver.observe(s));
+    </script>
   </body>
 </html>
