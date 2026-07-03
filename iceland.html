@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" class="gallery-page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iceland · RexChen Photography</title>
+    <meta name="description" content="Iceland — a photographic chapter by RexChen. Black sand, slow steam, and weather in constant edit along the volcanic coast." />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Iceland · RexChen Photography" />
+    <meta property="og:description" content="Iceland — black sand, slow steam, and weather in constant edit along the volcanic coast." />
+    <meta property="og:image" content="Iceland/cover.jpg" />
+    <meta name="theme-color" content="#0a0a0c" />
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230a0a0c'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' font-style='italic' fill='%23c8a96b' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"><span class="cursor-label">VIEW</span></div>
+
+    <svg class="grain-svg" xmlns="http://www.w3.org/2000/svg">
+      <filter id="grain-filter">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
+        <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.35 0" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#grain-filter)" />
+    </svg>
+
+    <a class="gallery-back" href="index.html#series">← Back</a>
+
+    <main>
+      <section class="gallery-hero">
+        <div class="gallery-hero-bg" style="background-image: url('Iceland/cover.jpg');"></div>
+        <div class="gallery-hero-overlay"></div>
+        <div class="gallery-hero-inner reveal">
+          <p class="eyebrow">CHAPTER 02 · ELDLAND</p>
+          <h1 class="display">Iceland,<br /><em>an island in edit.</em></h1>
+          <p class="lead">A country written and unwritten by weather. Basalt, black sand, drifting steam — and a horizon that keeps revising itself, hour by hour. Photographs from a slow argument with the elements.</p>
+          <div class="gallery-meta">
+            <div><span>Location</span>Iceland</div>
+            <div><span>Season</span>Early Summer, MMXXVI</div>
+            <div><span>Instrument</span>Sony A7 V</div>
+            <div><span>Frames</span><span id="frame-count">—</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-section">
+        <p class="eyebrow">PLATES · IN SEQUENCE</p>
+        <h2 class="display-sm">The <em>frames.</em></h2>
+        <p class="gallery-lead">Read left to right, top to bottom — the order of the walk, not the order of importance. Each plate opens on click.</p>
+
+        <div class="grid" id="grid"></div>
+      </section>
+
+      <section class="gallery-footer">
+        <p class="eyebrow">PREVIOUS CHAPTER</p>
+        <h2 class="display-sm">Back to <em>Norway.</em></h2>
+        <a class="btn btn-large" href="norway.html">
+          <span>Read Chapter 01</span>
+          <span class="btn-arrow">→</span>
+        </a>
+      </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+      <button class="lightbox-close" aria-label="Close">CLOSE ✕</button>
+      <img alt="" />
+      <div class="lightbox-caption"></div>
+    </div>
+
+    <script>
+      // ===== Split-text animation =====
+      document.querySelectorAll('.display, .display-sm').forEach((heading) => {
+        let charIndex = 0;
+        const walk = (node) => {
+          Array.from(node.childNodes).forEach((child) => {
+            if (child.nodeType === Node.TEXT_NODE) {
+              const frag = document.createDocumentFragment();
+              child.textContent.split(/(\s+)/).forEach((word) => {
+                if (/^\s+$/.test(word)) { frag.appendChild(document.createTextNode(word)); return; }
+                const wordSpan = document.createElement('span');
+                wordSpan.className = 'word';
+                Array.from(word).forEach((ch) => {
+                  const inner = document.createElement('span');
+                  inner.className = 'char';
+                  inner.style.setProperty('--char-i', charIndex++);
+                  inner.textContent = ch;
+                  wordSpan.appendChild(inner);
+                });
+                frag.appendChild(wordSpan);
+              });
+              node.replaceChild(frag, child);
+            } else if (child.nodeType === Node.ELEMENT_NODE && child.tagName !== 'BR') {
+              walk(child);
+            }
+          });
+        };
+        walk(heading);
+        heading.classList.add('split');
+      });
+
+      // ===== Custom cursor =====
+      const cursorDot = document.querySelector('.cursor-dot');
+      const cursorRing = document.querySelector('.cursor-ring');
+      let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+      let ringX = mouseX, ringY = mouseY;
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX; mouseY = e.clientY;
+        cursorDot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+      });
+      (function ring() {
+        ringX += (mouseX - ringX) * 0.15;
+        ringY += (mouseY - ringY) * 0.15;
+        cursorRing.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)`;
+        requestAnimationFrame(ring);
+      })();
+
+      // ===== Reveal on scroll =====
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('is-visible');
+        });
+      }, { threshold: 0.2 });
+      document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+      // ===== Auto-populate gallery grid =====
+      const FOLDER = 'Iceland';
+      const PATTERNS = [
+        (i) => `${FOLDER}/${String(i).padStart(2, '0')}.jpg`,
+        (i) => `${FOLDER}/${String(i).padStart(2, '0')}.JPG`,
+        (i) => `${FOLDER}/${i}.jpg`,
+        (i) => `${FOLDER}/iceland-${String(i).padStart(2, '0')}.jpg`,
+      ];
+      const MAX_PROBE = 60;
+
+      const grid = document.getElementById('grid');
+      const frameCount = document.getElementById('frame-count');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = lightbox.querySelector('img');
+      const lightboxCap = lightbox.querySelector('.lightbox-caption');
+
+      function tryLoad(src) {
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.onload = () => resolve(src);
+          img.onerror = () => resolve(null);
+          img.src = src;
+        });
+      }
+
+      async function resolveIndex(i) {
+        for (const build of PATTERNS) {
+          const src = build(i);
+          const ok = await tryLoad(src);
+          if (ok) return ok;
+        }
+        return null;
+      }
+
+      function addTile(src, i) {
+        const cell = document.createElement('a');
+        cell.className = 'grid-item';
+        if (i % 7 === 3) cell.classList.add('wide');
+        cell.href = src;
+        cell.setAttribute('data-caption', `Iceland · ${String(i).padStart(2, '0')}`);
+        const img = document.createElement('img');
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        img.alt = `Iceland frame ${i}`;
+        img.src = src;
+        cell.appendChild(img);
+        const cap = document.createElement('span');
+        cap.className = 'grid-caption';
+        cap.textContent = `Frame ${String(i).padStart(2, '0')}`;
+        cell.appendChild(cap);
+        cell.addEventListener('click', (e) => {
+          e.preventDefault();
+          lightboxImg.src = src;
+          lightboxImg.alt = img.alt;
+          lightboxCap.textContent = cell.dataset.caption;
+          lightbox.classList.add('is-open');
+        });
+        grid.appendChild(cell);
+      }
+
+      function addEmptyState() {
+        const empty = document.createElement('div');
+        empty.className = 'grid-item empty wide';
+        empty.textContent = 'Add photos to /Iceland/';
+        grid.appendChild(empty);
+      }
+
+      (async () => {
+        let count = 0;
+        let missStreak = 0;
+        for (let i = 1; i <= MAX_PROBE; i++) {
+          const src = await resolveIndex(i);
+          if (src) {
+            addTile(src, i);
+            count++;
+            missStreak = 0;
+          } else {
+            missStreak++;
+            if (missStreak >= 3 && count > 0) break;
+            if (missStreak >= 6) break;
+          }
+        }
+        frameCount.textContent = count ? String(count).padStart(2, '0') : '—';
+        if (count === 0) addEmptyState();
+      })();
+
+      lightbox.addEventListener('click', () => lightbox.classList.remove('is-open'));
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') lightbox.classList.remove('is-open');
+      });
+    </script>
+  </body>
+</html>
