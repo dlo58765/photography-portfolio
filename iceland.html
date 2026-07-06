@@ -35,7 +35,7 @@
 
     <main>
       <section class="gallery-hero">
-        <div class="gallery-hero-bg" style="background-image: url('Iceland/cover.jpg');"></div>
+        <div class="gallery-hero-bg" style="background-image: url('Iceland/thumbs/cover.jpg');"></div>
         <div class="gallery-hero-overlay"></div>
         <div class="gallery-hero-inner reveal">
           <p class="eyebrow">CHAPTER 02 · ELDLAND</p>
@@ -167,13 +167,19 @@
         const cell = document.createElement('a');
         cell.className = 'grid-item';
         if (i % 7 === 3) cell.classList.add('wide');
+        // src is the original full-size file; use the pre-rendered thumbnail in the grid.
+        const name = src.split('/').pop();
+        const thumbSrc = `${FOLDER}/thumbs/${name}`;
         cell.href = src;
         cell.setAttribute('data-caption', `Iceland · ${String(i).padStart(2, '0')}`);
         const img = document.createElement('img');
         img.loading = 'lazy';
         img.decoding = 'async';
         img.alt = `Iceland frame ${i}`;
-        img.src = src;
+        img.onerror = () => {
+          if (img.src.endsWith(thumbSrc)) { img.onerror = null; img.src = src; }
+        };
+        img.src = thumbSrc;
         cell.appendChild(img);
         const cap = document.createElement('span');
         cap.className = 'grid-caption';

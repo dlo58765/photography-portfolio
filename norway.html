@@ -35,7 +35,7 @@
 
     <main>
       <section class="gallery-hero">
-        <div class="gallery-hero-bg" style="background-image: url('Norway/cover.jpg');"></div>
+        <div class="gallery-hero-bg" style="background-image: url('Norway/thumbs/cover.jpg');"></div>
         <div class="gallery-hero-overlay"></div>
         <div class="gallery-hero-inner reveal">
           <p class="eyebrow">CHAPTER 01 · NORDLYS</p>
@@ -50,13 +50,14 @@
         </div>
       </section>
 
-      <section class="gallery-section">
-        <p class="eyebrow">PLATES · IN SEQUENCE</p>
-        <h2 class="display-sm">The <em>frames.</em></h2>
-        <p class="gallery-lead">Read left to right, top to bottom — the order of the walk, not the order of importance. Each plate opens on click.</p>
-
-        <div class="grid" id="grid"></div>
+      <section class="gallery-intro">
+        <p class="eyebrow">THE ROUTE · IN CHAPTERS</p>
+        <h2 class="display-sm">A journey in <em>small movements.</em></h2>
+        <p class="gallery-lead">Each stop below is its own short chapter — a place, a few frames, a note on what the day held. Read straight through, or jump into the town that catches your eye.</p>
+        <nav class="chapter-nav" id="chapter-nav"></nav>
       </section>
+
+      <div class="chapters" id="chapters"></div>
 
       <section class="gallery-footer">
         <p class="eyebrow">NEXT CHAPTER</p>
@@ -75,8 +76,91 @@
     </div>
 
     <script>
+      // =====================================================================
+      // EDIT ME — Chapter data. Each entry becomes one section on the page.
+      //   number   : shown as "STOP 01" style eyebrow
+      //   city     : big italic word in the title
+      //   region   : small line under the title (country/region)
+      //   dates    : e.g. "May 12 – 14"
+      //   summary  : short paragraph, the "why" of this place
+      //   notes    : array of quick bullet facts (kept short)
+      //   images   : array of frame numbers from /Norway/ (e.g. [1,2,3])
+      // =====================================================================
+      const CHAPTERS = [
+        {
+          number: '01',
+          city: 'Tromsø',
+          region: 'Troms · Arctic Norway',
+          dates: 'Day 01 – 02',
+          summary: 'The gateway to the Arctic. Wooden houses stacked against the mountain, the cathedral catching low sun across the strait, and a harbour that smells of cold sea.',
+          notes: [
+            'Arctic Cathedral 遠眺',
+            'Fjellheisen 纜車看城市',
+          ],
+          images: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        },
+        {
+          number: '02',
+          city: 'Senja',
+          region: 'Troms · The Island',
+          dates: 'Day 03 – 04',
+          summary: 'Norway’s second-largest island, quieter than its neighbours. Jagged Devil’s Teeth peaks, empty beaches, and roads that curl between fjord and forest.',
+          notes: [
+            '（Segla / Hesten 登山路線）',
+            '（Ersfjord 沙灘）',
+          ],
+          images: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+        },
+        {
+          number: '03',
+          city: 'Svolvær',
+          region: 'Lofoten · East',
+          dates: 'Day 05 – 06',
+          summary: 'The unofficial capital of Lofoten. Fishing boats coming in at dusk, the Svolværgeita spire above town, and rorbuer glowing red on the water.',
+          notes: [
+            '（Svolværgeita 攀岩地標）',
+            '（港口日落 / 夜景）',
+          ],
+          images: [22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48],
+        },
+        {
+          number: '04',
+          city: 'Reine',
+          region: 'Lofoten · Moskenes',
+          dates: 'Day 07 – 08',
+          summary: 'The postcard of Norway. Red cabins scattered along the shore, granite peaks rising straight from the sea, and the classic view from Reinebringen at the top of a thousand stone steps.',
+          notes: [
+            '（Å i Lofoten 漁村散步）',
+            '（Sakrisøy 黃色小屋）',
+          ],
+          images: [76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98],
+        },
+        {
+          number: '05',
+          city: 'Mannen · Haukland · Leknes',
+          region: 'Lofoten · Vestvågøy',
+          dates: 'Day 09 – 12',
+          summary: 'The white-sand west side. Haukland’s turquoise water, the ridge of Mannen looking back over the beach, and Leknes as the quiet base town for the final days.',
+          notes: [
+            'Mannen 稜線 hike（俯瞰 Haukland）',
+            'Haukland Beach 白沙灘',
+            'Uttakleiv 相鄰海岸',
+            '（Leknes 補給 / 住宿據點）',
+          ],
+          images: [49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75],
+        },
+      ];
+
+      const FOLDER = 'Norway';
+      const PATTERNS = [
+        (i) => `${FOLDER}/${String(i).padStart(2, '0')}.jpg`,
+        (i) => `${FOLDER}/${String(i).padStart(2, '0')}.JPG`,
+        (i) => `${FOLDER}/${i}.jpg`,
+        (i) => `${FOLDER}/norway-${String(i).padStart(2, '0')}.jpg`,
+      ];
+
       // ===== Split-text animation =====
-      document.querySelectorAll('.display, .display-sm').forEach((heading) => {
+      function splitHeading(heading) {
         let charIndex = 0;
         const walk = (node) => {
           Array.from(node.childNodes).forEach((child) => {
@@ -103,7 +187,8 @@
         };
         walk(heading);
         heading.classList.add('split');
-      });
+      }
+      document.querySelectorAll('.display, .display-sm').forEach(splitHeading);
 
       // ===== Custom cursor =====
       const cursorDot = document.querySelector('.cursor-dot');
@@ -126,28 +211,21 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) entry.target.classList.add('is-visible');
         });
-      }, { threshold: 0.2 });
-      document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+      }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
+      const observeReveals = (root = document) =>
+        root.querySelectorAll('.reveal:not(.is-visible)').forEach((el) => revealObserver.observe(el));
+      observeReveals();
 
-      // ===== Auto-populate gallery grid =====
-      // Edit this list — or use any of these naming conventions:
-      //   Norway/01.jpg, Norway/02.jpg ... (auto-detected up to 60)
-      //   Norway/norway-01.jpg ...
-      const FOLDER = 'Norway';
-      const PATTERNS = [
-        (i) => `${FOLDER}/${String(i).padStart(2, '0')}.jpg`,
-        (i) => `${FOLDER}/${String(i).padStart(2, '0')}.JPG`,
-        (i) => `${FOLDER}/${i}.jpg`,
-        (i) => `${FOLDER}/norway-${String(i).padStart(2, '0')}.jpg`,
-      ];
-      const MAX_PROBE = 60;
-
-      const grid = document.getElementById('grid');
-      const frameCount = document.getElementById('frame-count');
+      // ===== Lightbox =====
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = lightbox.querySelector('img');
       const lightboxCap = lightbox.querySelector('.lightbox-caption');
+      lightbox.addEventListener('click', () => lightbox.classList.remove('is-open'));
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') lightbox.classList.remove('is-open');
+      });
 
+      // ===== Resolve image path =====
       function tryLoad(src) {
         return new Promise((resolve) => {
           const img = new Image();
@@ -156,7 +234,6 @@
           img.src = src;
         });
       }
-
       async function resolveIndex(i) {
         for (const build of PATTERNS) {
           const src = build(i);
@@ -166,18 +243,51 @@
         return null;
       }
 
-      function addTile(src, i) {
+      // ===== Build one chapter block =====
+      function buildChapter(chapter, idx) {
+        const section = document.createElement('section');
+        section.className = 'chapter reveal';
+        section.id = `stop-${chapter.number}`;
+        if (idx % 2 === 1) section.classList.add('chapter--alt');
+
+        const intro = document.createElement('div');
+        intro.className = 'chapter-intro';
+        intro.innerHTML = `
+          <p class="eyebrow">STOP ${chapter.number} · ${chapter.dates}</p>
+          <h3 class="chapter-title">${chapter.city}<span class="chapter-region">${chapter.region}</span></h3>
+          <p class="chapter-summary">${chapter.summary}</p>
+          <ul class="chapter-notes">
+            ${chapter.notes.map((n) => `<li>${n}</li>`).join('')}
+          </ul>
+        `;
+
+        const grid = document.createElement('div');
+        grid.className = 'chapter-grid';
+
+        section.appendChild(intro);
+        section.appendChild(grid);
+        return { section, grid };
+      }
+
+      function addTile(grid, thumbSrc, fullSrc, i, chapterCity) {
         const cell = document.createElement('a');
         cell.className = 'grid-item';
-        // rhythm: every 7th tile wide
-        if (i % 7 === 3) cell.classList.add('wide');
-        cell.href = src;
-        cell.setAttribute('data-caption', `Norway · ${String(i).padStart(2, '0')}`);
+        cell.href = fullSrc;
+        cell.setAttribute('data-caption', `${chapterCity} · Frame ${String(i).padStart(2, '0')}`);
         const img = document.createElement('img');
         img.loading = 'lazy';
         img.decoding = 'async';
-        img.alt = `Norway frame ${i}`;
-        img.src = src;
+        img.alt = `${chapterCity} frame ${i}`;
+        img.onerror = () => {
+          // if the thumb is missing, fall back to the original; if that also fails, drop the tile
+          if (img.src.endsWith(thumbSrc)) {
+            img.onerror = () => cell.remove();
+            img.src = fullSrc;
+          } else {
+            cell.remove();
+          }
+        };
+        img.src = thumbSrc;
         cell.appendChild(img);
         const cap = document.createElement('span');
         cap.className = 'grid-caption';
@@ -185,7 +295,7 @@
         cell.appendChild(cap);
         cell.addEventListener('click', (e) => {
           e.preventDefault();
-          lightboxImg.src = src;
+          lightboxImg.src = fullSrc;
           lightboxImg.alt = img.alt;
           lightboxCap.textContent = cell.dataset.caption;
           lightbox.classList.add('is-open');
@@ -193,37 +303,52 @@
         grid.appendChild(cell);
       }
 
-      function addEmptyState() {
-        const empty = document.createElement('div');
-        empty.className = 'grid-item empty wide';
-        empty.textContent = 'Add photos to /Norway/';
-        grid.appendChild(empty);
+      // ===== Build chapter nav =====
+      function buildNav() {
+        const nav = document.getElementById('chapter-nav');
+        CHAPTERS.forEach((c) => {
+          const a = document.createElement('a');
+          a.href = `#stop-${c.number}`;
+          a.className = 'chapter-nav-link';
+          a.innerHTML = `<span class="chapter-nav-num">${c.number}</span><span class="chapter-nav-city">${c.city}</span>`;
+          nav.appendChild(a);
+        });
       }
 
+      // ===== Render everything =====
       (async () => {
-        let count = 0;
-        let missStreak = 0;
-        for (let i = 1; i <= MAX_PROBE; i++) {
-          const src = await resolveIndex(i);
-          if (src) {
-            addTile(src, i);
-            count++;
-            missStreak = 0;
-          } else {
-            missStreak++;
-            if (missStreak >= 3 && count > 0) break;
-            if (missStreak >= 6) break;
+        buildNav();
+        const chaptersEl = document.getElementById('chapters');
+        let total = 0;
+
+        // Render all chapters immediately using the canonical NN.jpg path.
+        // Broken images self-hide via <img onerror>, so no upfront probing.
+        for (let idx = 0; idx < CHAPTERS.length; idx++) {
+          const chapter = CHAPTERS[idx];
+          const { section, grid } = buildChapter(chapter, idx);
+          chaptersEl.appendChild(section);
+
+          for (const i of chapter.images) {
+            const name = `${String(i).padStart(2, '0')}.jpg`;
+            const thumbSrc = `${FOLDER}/thumbs/${name}`;
+            const fullSrc  = `${FOLDER}/${name}`;
+            addTile(grid, thumbSrc, fullSrc, i, chapter.city);
+            total++;
+          }
+
+          if (chapter.images.length === 0) {
+            const empty = document.createElement('div');
+            empty.className = 'grid-item empty';
+            empty.textContent = `Add ${chapter.city} photos to /Norway/`;
+            grid.appendChild(empty);
           }
         }
-        frameCount.textContent = count ? String(count).padStart(2, '0') : '—';
-        if (count === 0) addEmptyState();
-      })();
 
-      // Lightbox close
-      lightbox.addEventListener('click', () => lightbox.classList.remove('is-open'));
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') lightbox.classList.remove('is-open');
-      });
+        document.getElementById('frame-count').textContent =
+          total ? String(total).padStart(2, '0') : '—';
+
+        observeReveals();
+      })();
     </script>
   </body>
 </html>
