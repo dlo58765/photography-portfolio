@@ -1,0 +1,36 @@
+{
+  "cover": {
+    "thumb": "thumbs/cover.jpg",
+    "full": "cover.jpg"
+  },
+  "frames": [
+    {
+      "thumb": "thumbs/01.jpg",
+      "full": "01.jpg"
+    },
+    {
+      "thumb": "thumbs/02.jpg",
+      "full": "02.jpg"
+    },
+    {
+      "thumb": "thumbs/03.jpg",
+      "full": "03.jpg"
+    },
+    {
+      "thumb": "thumbs/04.jpg",
+      "full": "04.jpg"
+    },
+    {
+      "thumb": "thumbs/05.jpg",
+      "full": "05.jpg"
+    },
+    {
+      "thumb": "thumbs/06.jpg",
+      "full": "06.jpg"
+    },
+    {
+      "thumb": "thumbs/07.jpg",
+      "full": "07.jpg"
+    }
+  ]
+}

@@ -69,8 +69,10 @@
     </main>
 
     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
-      <button class="lightbox-close" aria-label="Close">CLOSE ✕</button>
+      <button class="lightbox-close" aria-label="Close">esc &nbsp;/&nbsp; click to close</button>
+      <button class="lightbox-nav lightbox-prev" aria-label="Previous frame">&#8249;</button>
       <img alt="" />
+      <button class="lightbox-nav lightbox-next" aria-label="Next frame">&#8250;</button>
       <div class="lightbox-caption"></div>
     </div>
 
@@ -163,15 +165,24 @@
         return null;
       }
 
+      // Collected in tile order; opened by index so prev/next can page.
+      const frames = [];
+
       function addTile(src, i) {
+        const label = String(i).padStart(2, '0');
+        const idx = frames.length;
+        frames.push({
+          src,
+          alt: `Iceland frame ${i}`,
+          caption: `Iceland · ${label}`,
+        });
+
         const cell = document.createElement('a');
         cell.className = 'grid-item';
         if (i % 7 === 3) cell.classList.add('wide');
-        // src is the original full-size file; use the pre-rendered thumbnail in the grid.
         const name = src.split('/').pop();
         const thumbSrc = `${FOLDER}/thumbs/${name}`;
         cell.href = src;
-        cell.setAttribute('data-caption', `Iceland · ${String(i).padStart(2, '0')}`);
         const img = document.createElement('img');
         img.loading = 'lazy';
         img.decoding = 'async';
@@ -183,14 +194,11 @@
         cell.appendChild(img);
         const cap = document.createElement('span');
         cap.className = 'grid-caption';
-        cap.textContent = `Frame ${String(i).padStart(2, '0')}`;
+        cap.textContent = `Frame ${label}`;
         cell.appendChild(cap);
         cell.addEventListener('click', (e) => {
           e.preventDefault();
-          lightboxImg.src = src;
-          lightboxImg.alt = img.alt;
-          lightboxCap.textContent = cell.dataset.caption;
-          lightbox.classList.add('is-open');
+          openLightbox(idx);
         });
         grid.appendChild(cell);
       }
@@ -221,9 +229,60 @@
         if (count === 0) addEmptyState();
       })();
 
-      lightbox.addEventListener('click', () => lightbox.classList.remove('is-open'));
+      // ===== Lightbox nav (prev/next, keyboard, swipe) =====
+      const lbPrev = lightbox.querySelector('.lightbox-prev');
+      const lbNext = lightbox.querySelector('.lightbox-next');
+      let lbIndex = 0;
+
+      function showFrame(index) {
+        if (!frames.length) return;
+        const n = frames.length;
+        const i = ((index % n) + n) % n;
+        const f = frames[i];
+        lightboxImg.src = f.src;
+        lightboxImg.alt = f.alt;
+        lightboxCap.textContent = `${f.caption} · ${i + 1} / ${n}`;
+        lbIndex = i;
+        const solo = n <= 1;
+        lbPrev.classList.toggle('is-hidden', solo);
+        lbNext.classList.toggle('is-hidden', solo);
+      }
+      function openLightbox(index) {
+        showFrame(index);
+        lightbox.classList.add('is-open');
+      }
+      function closeLightbox() { lightbox.classList.remove('is-open'); }
+      function nextFrame() { showFrame(lbIndex + 1); }
+      function prevFrame() { showFrame(lbIndex - 1); }
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+      lightboxImg.addEventListener('click', (e) => e.stopPropagation());
+      lbPrev.addEventListener('click', (e) => { e.stopPropagation(); prevFrame(); });
+      lbNext.addEventListener('click', (e) => { e.stopPropagation(); nextFrame(); });
+
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') lightbox.classList.remove('is-open');
+        if (!lightbox.classList.contains('is-open')) return;
+        if (e.key === 'Escape')          closeLightbox();
+        else if (e.key === 'ArrowLeft')  prevFrame();
+        else if (e.key === 'ArrowRight') nextFrame();
+      });
+
+      let touchStartX = null, touchStartY = null;
+      lightbox.addEventListener('touchstart', (e) => {
+        if (e.touches.length !== 1) return;
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+      }, { passive: true });
+      lightbox.addEventListener('touchend', (e) => {
+        if (touchStartX === null) return;
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dy = e.changedTouches[0].clientY - touchStartY;
+        touchStartX = touchStartY = null;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+          if (dx < 0) nextFrame(); else prevFrame();
+        }
       });
     </script>
   </body>

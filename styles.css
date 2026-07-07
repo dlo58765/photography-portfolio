@@ -981,17 +981,50 @@ html.gallery-page main {
 }
 .lightbox-close {
   position: absolute;
-  top: 24px;
-  right: 32px;
-  font-size: 0.75rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--text);
-  opacity: 0.7;
-  transition: opacity 0.2s;
+  bottom: 28px;
+  left: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.68rem;
+  letter-spacing: 0.32em;
+  text-transform: lowercase;
+  color: var(--muted-strong);
+  opacity: 0.55;
+  transition: opacity 0.3s ease, color 0.3s ease;
   cursor: none;
 }
-.lightbox-close:hover { opacity: 1; color: var(--accent); }
+.lightbox-close:hover { opacity: 0.95; color: var(--text); }
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1;
+  opacity: 0.35;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+  cursor: none;
+  user-select: none;
+}
+.lightbox-nav:hover { opacity: 0.95; }
+.lightbox-prev { left: 32px; }
+.lightbox-next { right: 32px; }
+.lightbox-prev:hover { transform: translateY(-50%) translateX(-4px); }
+.lightbox-next:hover { transform: translateY(-50%) translateX(4px); }
+.lightbox-nav.is-hidden { display: none; }
+@media (max-width: 720px) {
+  /* On phones the swipe is the primary control; the buttons only clutter. */
+  .lightbox-nav { display: none; }
+}
 .lightbox-caption {
   position: absolute;
   bottom: 28px;
