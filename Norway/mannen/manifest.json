@@ -3,111 +3,192 @@
   "frames": [
     {
       "thumb": "thumbs/01.jpg",
-      "full": "01.jpg"
+      "full": "01.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/02.jpg",
-      "full": "02.jpg"
+      "full": "02.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/03.jpg",
-      "full": "03.jpg"
+      "full": "03.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/04.jpg",
-      "full": "04.jpg"
+      "full": "04.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/05.jpg",
-      "full": "05.jpg"
+      "full": "05.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/06.jpg",
-      "full": "06.jpg"
+      "full": "06.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/07.jpg",
-      "full": "07.jpg"
+      "full": "07.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/08.jpg",
-      "full": "08.jpg"
+      "full": "08.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/09 - \u8907\u88fd.jpg",
-      "full": "09 - \u8907\u88fd.jpg"
+      "full": "09 - \u8907\u88fd.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/10.jpg",
-      "full": "10.jpg"
+      "full": "10.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/11.jpg",
-      "full": "11.jpg"
+      "full": "11.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/12.jpg",
-      "full": "12.jpg"
+      "full": "12.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/13.jpg",
-      "full": "13.jpg"
+      "full": "13.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/14.jpg",
-      "full": "14.jpg"
+      "full": "14.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/15.jpg",
-      "full": "15.jpg"
+      "full": "15.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/16.jpg",
-      "full": "16.jpg"
+      "full": "16.jpg",
+      "w": 1069,
+      "h": 1600,
+      "shape": "portrait"
     },
     {
       "thumb": "thumbs/17.jpg",
-      "full": "17.jpg"
+      "full": "17.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/18.jpg",
-      "full": "18.jpg"
+      "full": "18.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/19.jpg",
-      "full": "19.jpg"
+      "full": "19.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/20.jpg",
-      "full": "20.jpg"
+      "full": "20.jpg",
+      "w": 1069,
+      "h": 1600,
+      "shape": "portrait"
     },
     {
       "thumb": "thumbs/21.jpg",
-      "full": "21.jpg"
+      "full": "21.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/22.jpg",
-      "full": "22.jpg"
+      "full": "22.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/23.jpg",
-      "full": "23.jpg"
+      "full": "23.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/24.jpg",
-      "full": "24.jpg"
+      "full": "24.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/25.jpg",
-      "full": "25.jpg"
+      "full": "25.jpg",
+      "w": 1069,
+      "h": 1600,
+      "shape": "portrait"
     },
     {
       "thumb": "thumbs/26.jpg",
-      "full": "26.jpg"
+      "full": "26.jpg",
+      "w": 1069,
+      "h": 1600,
+      "shape": "portrait"
     },
     {
       "thumb": "thumbs/27.jpg",
-      "full": "27.jpg"
+      "full": "27.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     }
   ]
 }

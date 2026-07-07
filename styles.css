@@ -823,6 +823,105 @@ html.gallery-page main {
   letter-spacing: 0;
 }
 
+/* ===== Sticky mini chapter rail (desktop) ===== */
+.chapter-rail {
+  position: fixed;
+  top: 50%;
+  right: 32px;
+  transform: translateY(-50%);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 14px;
+  background: rgba(10, 10, 12, 0.55);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 999px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.chapter-rail.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.chapter-rail-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 4px 4px 4px 6px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+.chapter-rail-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(245, 245, 242, 0.35);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+.chapter-rail-label {
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--text);
+}
+.chapter-rail:hover .chapter-rail-label,
+.chapter-rail-link.is-active .chapter-rail-label {
+  opacity: 1;
+  transform: translateX(0);
+  max-width: 180px;
+}
+.chapter-rail-link:hover .chapter-rail-dot {
+  background: var(--muted-strong);
+  transform: scale(1.3);
+}
+.chapter-rail-link.is-active {
+  color: var(--accent);
+}
+.chapter-rail-link.is-active .chapter-rail-dot {
+  background: var(--accent);
+  transform: scale(1.4);
+  box-shadow: 0 0 0 3px rgba(200, 169, 107, 0.18);
+}
+.chapter-rail-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  color: inherit;
+}
+
+@media (max-width: 900px) {
+  .chapter-rail {
+    top: auto;
+    right: 12px;
+    left: 12px;
+    bottom: 16px;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 10px 12px;
+    gap: 6px;
+    scrollbar-width: none;
+  }
+  .chapter-rail::-webkit-scrollbar { display: none; }
+  .chapter-rail-label { display: none; }
+  .chapter-rail-link { padding: 4px; }
+}
+
 .chapters {
   max-width: 1600px;
   margin: 0 auto;
@@ -907,6 +1006,7 @@ html.gallery-page main {
   letter-spacing: -0.01em;
   margin: 0 0 10px;
   color: var(--text);
+  text-wrap: balance;
 }
 .chapter-region {
   display: block;
@@ -947,17 +1047,34 @@ html.gallery-page main {
   background: var(--accent);
 }
 
+/* 6-col track so we can express 3+3 (two portraits), 6 (full-bleed wide),
+ * 2+2+2 (triptych), or 3+3 (square pair). Each tile picks its span + ratio
+ * from the shape class emitted by addTile(). */
 .chapter-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 16px;
 }
 .chapter-grid .grid-item {
+  grid-column: span 3;         /* default: half-width portrait pair */
   aspect-ratio: 4 / 5;
 }
-.chapter-grid .grid-item:nth-child(3n+1) {
-  grid-column: span 2;
+.chapter-grid .grid-item.shape-portrait {
+  grid-column: span 3;
+  aspect-ratio: 4 / 5;
+}
+.chapter-grid .grid-item.shape-square {
+  grid-column: span 3;
+  aspect-ratio: 1 / 1;
+}
+.chapter-grid .grid-item.shape-wide {
+  grid-column: span 6;
   aspect-ratio: 16 / 10;
+}
+/* Rhythm break: every 4th wide gets a taller, tighter crop so long runs of
+ * horizontals don't all read the same. */
+.chapter-grid .grid-item.shape-wide:nth-of-type(4n) {
+  aspect-ratio: 21 / 9;
 }
 
 @media (max-width: 1100px) {
@@ -986,11 +1103,19 @@ html.gallery-page main {
 @media (max-width: 640px) {
   .gallery-intro { padding: 8vh 24px 2vh; }
   .chapters { padding: 2vh 24px; }
+  /* Collapse the 6-col rhythm to a single stream on phones; each shape
+   * keeps its own aspect so vertical photos still read as vertical. */
   .chapter-grid { grid-template-columns: 1fr; gap: 12px; }
   .chapter-grid .grid-item,
-  .chapter-grid .grid-item:nth-child(3n+1) {
+  .chapter-grid .grid-item.shape-portrait,
+  .chapter-grid .grid-item.shape-square,
+  .chapter-grid .grid-item.shape-wide,
+  .chapter-grid .grid-item.shape-wide:nth-of-type(4n) {
     grid-column: auto;
-    aspect-ratio: 4 / 5;
+  }
+  .chapter-grid .grid-item.shape-wide,
+  .chapter-grid .grid-item.shape-wide:nth-of-type(4n) {
+    aspect-ratio: 16 / 10;
   }
   .chapter-nav { gap: 6px 8px; }
   .chapter-nav-link { padding: 8px 12px; font-size: 0.7rem; }

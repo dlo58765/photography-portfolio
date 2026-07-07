@@ -3,63 +3,108 @@
   "frames": [
     {
       "thumb": "thumbs/dsc09120.jpg",
-      "full": "DSC09120.JPG"
+      "full": "DSC09120.JPG",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/dsc09130.jpg",
-      "full": "DSC09130.JPG"
+      "full": "DSC09130.JPG",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/dsc09133.jpg",
-      "full": "DSC09133.JPG"
+      "full": "DSC09133.JPG",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/dsc09144.jpg",
-      "full": "DSC09144.JPG"
+      "full": "DSC09144.JPG",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/dsc09145.jpg",
-      "full": "DSC09145.JPG"
+      "full": "DSC09145.JPG",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/dsc09147.jpg",
-      "full": "DSC09147.JPG"
+      "full": "DSC09147.JPG",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/dsc09148.jpg",
-      "full": "DSC09148.JPG"
+      "full": "DSC09148.JPG",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/dsc09162.jpg",
-      "full": "DSC09162.JPG"
+      "full": "DSC09162.JPG",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/dsc09168.jpg",
-      "full": "DSC09168.JPG"
+      "full": "DSC09168.JPG",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/dsc09172.jpg",
-      "full": "DSC09172.JPG"
+      "full": "DSC09172.JPG",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/dsc09173.jpg",
-      "full": "DSC09173.JPG"
+      "full": "DSC09173.JPG",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/dsc09176.jpg",
-      "full": "DSC09176.JPG"
+      "full": "DSC09176.JPG",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/dsc09183.jpg",
-      "full": "DSC09183.JPG"
+      "full": "DSC09183.JPG",
+      "w": 1069,
+      "h": 1600,
+      "shape": "portrait"
     },
     {
       "thumb": "thumbs/dsc09187.jpg",
-      "full": "DSC09187.JPG"
+      "full": "DSC09187.JPG",
+      "w": 1069,
+      "h": 1600,
+      "shape": "portrait"
     },
     {
       "thumb": "thumbs/dsc09196.jpg",
-      "full": "DSC09196.JPG"
+      "full": "DSC09196.JPG",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     }
   ]
 }

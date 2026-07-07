@@ -1,36 +1,60 @@
 {
   "cover": {
     "thumb": "thumbs/cover.jpg",
-    "full": "cover.jpg"
+    "full": "cover.jpg",
+    "w": 2400,
+    "h": 1600,
+    "shape": "wide"
   },
   "frames": [
     {
       "thumb": "thumbs/01.jpg",
-      "full": "01.jpg"
+      "full": "01.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/02.jpg",
-      "full": "02.jpg"
+      "full": "02.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/03.jpg",
-      "full": "03.jpg"
+      "full": "03.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/04.jpg",
-      "full": "04.jpg"
+      "full": "04.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/05.jpg",
-      "full": "05.jpg"
+      "full": "05.jpg",
+      "w": 1600,
+      "h": 1200,
+      "shape": "wide"
     },
     {
       "thumb": "thumbs/06.jpg",
-      "full": "06.jpg"
+      "full": "06.jpg",
+      "w": 1200,
+      "h": 1600,
+      "shape": "portrait"
     },
     {
       "thumb": "thumbs/07.jpg",
-      "full": "07.jpg"
+      "full": "07.jpg",
+      "w": 900,
+      "h": 1600,
+      "shape": "portrait"
     }
   ]
 }

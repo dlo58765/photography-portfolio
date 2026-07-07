@@ -100,13 +100,42 @@ def newer(src: Path, dst: Path) -> bool:
     return not dst.exists() or dst.stat().st_mtime < src.stat().st_mtime
 
 
+def orientation_of(w: int, h: int) -> str:
+    """Bucket into one of three shapes the grid layout uses.
+
+    ratio = w / h
+      > 1.15  -> "wide"      (clearly landscape)
+      < 0.87  -> "portrait"  (clearly vertical)
+      else    -> "square"    (near-square / anything ambiguous)
+    """
+    if h == 0:
+        return "square"
+    r = w / h
+    if r > 1.15:
+        return "wide"
+    if r < 0.87:
+        return "portrait"
+    return "square"
+
+
+def read_dims(path: Path) -> tuple[int, int] | None:
+    """Return (width, height) honoring EXIF orientation; None if unreadable."""
+    try:
+        with Image.open(path) as im:
+            im = ImageOps.exif_transpose(im)
+            return im.size
+    except Exception:
+        return None
+
+
 def process_image(src: Path, thumb_dir: Path, is_cover: bool
                   ) -> tuple[int, dict] | None:
     """Produce thumb (and, for HEIC, a display-JPEG); return (wrote_n, entry).
 
-    entry is the manifest record: {"thumb": "...", "full": "..."} paths
-    relative to the chapter folder. Returns None to skip (unreadable HEIC
-    with no pillow-heif installed, or an unexpected error).
+    entry is the manifest record: {"thumb", "full", "w", "h", "shape"}.
+    Paths are relative to the chapter folder; w/h are the display pixels
+    (post EXIF-rotate); shape is one of wide|portrait|square. Returns None
+    to skip (unreadable HEIC with no pillow-heif installed, or errors).
     """
     ext = src.suffix.lower()
     stem_lower = src.stem.lower()
@@ -141,9 +170,17 @@ def process_image(src: Path, thumb_dir: Path, is_cover: bool
         print(f"  [error {e.__class__.__name__}] {src.name}: {e}")
         return None
 
+    # Read dims from the thumb (cheap, already EXIF-rotated). Fall back to
+    # the original if the thumb is missing for some reason.
+    dims = read_dims(thumb) or read_dims(src) or (0, 0)
+    w, h = dims
+
     return wrote, {
         "thumb": f"thumbs/{thumb.name}",
         "full":  full_rel,
+        "w":     w,
+        "h":     h,
+        "shape": orientation_of(w, h),
     }
 
 
