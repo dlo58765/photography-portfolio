@@ -1,5 +1,8 @@
 {
-  "cover": null,
+  "cover": {
+    "thumb": "thumbs/cover.jpg",
+    "full": "cover.jpg"
+  },
   "frames": [
     {
       "thumb": "thumbs/01.jpg",
@@ -28,14 +31,6 @@
     {
       "thumb": "thumbs/07.jpg",
       "full": "07.jpg"
-    },
-    {
-      "thumb": "thumbs/08.jpg",
-      "full": "08.jpg"
-    },
-    {
-      "thumb": "thumbs/09.jpg",
-      "full": "09.jpg"
     },
     {
       "thumb": "thumbs/10.jpg",

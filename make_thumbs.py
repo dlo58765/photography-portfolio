@@ -36,8 +36,25 @@ overwritten only if the source file is newer than the thumb.
 
 import json
 import re
+import sys
 from pathlib import Path
-from PIL import Image, ImageOps
+
+# --- Dependency check ------------------------------------------------------
+# Pillow (imported as PIL) is required. If the user runs this in a Python
+# environment that doesn't have it, print an install command they can copy
+# and paste — using THIS interpreter's path so multi-Python setups on
+# Windows (Store Python vs python.org vs venv) install into the right one.
+try:
+    from PIL import Image, ImageOps
+except ImportError:
+    py = sys.executable
+    print("ERROR: Pillow is not installed for this Python.\n")
+    print(f"       Current Python: {py}")
+    print( "       Install it with:\n")
+    print(f'         "{py}" -m pip install Pillow\n')
+    print("       (Optional, to also handle .heic photos:)")
+    print(f'         "{py}" -m pip install pillow-heif\n')
+    sys.exit(1)
 
 # Optional HEIC support. Falls back to a warning instead of crashing so
 # people without the extra dep can still process jpg/png.

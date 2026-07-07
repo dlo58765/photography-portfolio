@@ -828,20 +828,68 @@ html.gallery-page main {
   margin: 0 auto;
   padding: 4vh 6vw 4vh;
 }
+/* --- Chapters --- there are two layouts depending on whether the folder
+ * has a cover.jpg:
+ *   No cover: [intro | grid]  — old sticky-sidebar design
+ *   Has cover: [ hero | intro ]  above  [ grid ]  — cover pairs with the text
+ * `.chapter--alt` mirrors the horizontal order for both.
+ */
 .chapter {
+  padding: 10vh 0;
+  border-top: 1px solid var(--border);
+}
+.chapter:first-child { border-top: none; padding-top: 4vh; }
+
+/* -- No-cover: intro + grid as siblings in a 2-col grid -- */
+.chapter:not(.chapter--has-hero) {
   display: grid;
   grid-template-columns: 340px 1fr;
   gap: 72px;
-  padding: 10vh 0;
-  border-top: 1px solid var(--border);
   align-items: start;
 }
-.chapter:first-child { border-top: none; padding-top: 4vh; }
-.chapter--alt {
+.chapter--alt:not(.chapter--has-hero) {
   grid-template-columns: 1fr 340px;
 }
-.chapter--alt .chapter-intro { order: 2; }
-.chapter--alt .chapter-grid  { order: 1; }
+.chapter--alt:not(.chapter--has-hero) .chapter-intro { order: 2; }
+.chapter--alt:not(.chapter--has-hero) .chapter-grid  { order: 1; }
+
+/* -- Has-cover: the chapter is a vertical stack; its header row is a 2-col
+      grid of hero + intro. -- */
+.chapter--has-hero .chapter-header {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;    /* image a touch wider than the words */
+  gap: 56px;
+  align-items: center;                  /* text baseline sits mid-image */
+  margin-bottom: 6vh;
+}
+.chapter--has-hero.chapter--alt .chapter-header {
+  grid-template-columns: 1fr 1.35fr;
+}
+.chapter--has-hero.chapter--alt .chapter-intro { order: 1; }
+.chapter--has-hero.chapter--alt .chapter-hero  { order: 2; }
+.chapter--has-hero .chapter-intro { position: static; }   /* no sticky when paired with the hero */
+
+.chapter-hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background-size: cover;
+  background-position: center;
+  background-color: #0f0f12;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+.chapter-hero::after {
+  /* subtle vignette so the hero doesn't feel like a raw block */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+              rgba(10,10,12,0.05) 0%,
+              rgba(10,10,12,0)     35%,
+              rgba(10,10,12,0)     65%,
+              rgba(10,10,12,0.30) 100%);
+  pointer-events: none;
+}
 
 .chapter-intro {
   position: sticky;
@@ -913,15 +961,27 @@ html.gallery-page main {
 }
 
 @media (max-width: 1100px) {
-  .chapter,
-  .chapter--alt {
+  .chapter { padding: 8vh 0; }
+  /* No-cover: collapse the sticky-sidebar into a single column */
+  .chapter:not(.chapter--has-hero),
+  .chapter--alt:not(.chapter--has-hero) {
     grid-template-columns: 1fr;
     gap: 40px;
-    padding: 8vh 0;
   }
-  .chapter--alt .chapter-intro { order: 0; }
-  .chapter--alt .chapter-grid  { order: 0; }
+  .chapter--alt:not(.chapter--has-hero) .chapter-intro,
+  .chapter--alt:not(.chapter--has-hero) .chapter-grid { order: 0; }
+  /* Has-cover: hero above intro (single column) */
+  .chapter--has-hero .chapter-header,
+  .chapter--has-hero.chapter--alt .chapter-header {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 5vh;
+  }
+  .chapter--has-hero.chapter--alt .chapter-intro,
+  .chapter--has-hero.chapter--alt .chapter-hero { order: 0; }
   .chapter-intro { position: static; }
+  .chapter-hero { aspect-ratio: 16 / 9; }
 }
 @media (max-width: 640px) {
   .gallery-intro { padding: 8vh 24px 2vh; }
@@ -934,6 +994,7 @@ html.gallery-page main {
   }
   .chapter-nav { gap: 6px 8px; }
   .chapter-nav-link { padding: 8px 12px; font-size: 0.7rem; }
+  .chapter-hero { aspect-ratio: 4 / 3; }
 }
 
 @media (max-width: 1100px) {
