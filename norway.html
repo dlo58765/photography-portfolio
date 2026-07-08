@@ -32,6 +32,7 @@
     </svg>
 
     <a class="gallery-back" href="index.html#series">← Back</a>
+    <a class="gallery-map" href="map.html" title="View locations on map">🗺️ Map</a>
 
     <main>
       <section class="gallery-hero">
@@ -2070,6 +2071,18 @@
 
         observeReveals();
         initChapterRail();
+
+        // ===== Handle URL hash to scroll to chapter =====
+        if (window.location.hash) {
+          const hash = window.location.hash.slice(1); // Remove '#'
+          const targetElement = document.getElementById(hash);
+          if (targetElement) {
+            // Use setTimeout to ensure scrolling happens after page render
+            setTimeout(() => {
+              targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+          }
+        }
       })();
     </script>
   </body>

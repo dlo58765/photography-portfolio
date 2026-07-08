@@ -685,6 +685,24 @@ html.gallery-page main {
 }
 .gallery-back:hover { gap: 16px; opacity: 1; }
 
+.gallery-map {
+  position: fixed;
+  top: 28px;
+  right: 48px;
+  z-index: 100;
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  color: var(--text);
+  mix-blend-mode: difference;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0.85;
+}
+.gallery-map:hover { opacity: 1; transform: scale(1.1); }
+
 .gallery-section {
   padding: 12vh 6vw;
   max-width: 1600px;
@@ -1134,6 +1152,7 @@ html.gallery-page main {
     aspect-ratio: 4 / 5;
   }
   .gallery-back { top: 18px; left: 24px; }
+  .gallery-map { top: 18px; right: 24px; }
   .gallery-hero { padding: 0 24px 8vh; min-height: 70vh; }
   .gallery-section { padding: 8vh 24px; }
   .gallery-meta { gap: 20px; }
