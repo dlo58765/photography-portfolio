@@ -2,6 +2,13 @@
   "cover": null,
   "frames": [
     {
+      "thumb": "thumbs/0.jpg",
+      "full": "0.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
       "thumb": "thumbs/1.jpg",
       "full": "1.JPG",
       "w": 1600,

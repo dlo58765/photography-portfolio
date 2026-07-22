@@ -5,7 +5,7 @@
       "thumb": "thumbs/1.jpg",
       "full": "1.jpg",
       "w": 1600,
-      "h": 1069,
+      "h": 1201,
       "shape": "wide"
     },
     {
@@ -63,6 +63,13 @@
       "w": 1200,
       "h": 1600,
       "shape": "portrait"
+    },
+    {
+      "thumb": "thumbs/10.jpg",
+      "full": "10.jpg",
+      "w": 1600,
+      "h": 1069,
+      "shape": "wide"
     }
   ]
 }
