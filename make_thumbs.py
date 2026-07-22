@@ -72,6 +72,7 @@ SOURCE_DIRS = ["Norway", "Iceland"]
 # and which folder each one pulls from.
 INLINE_TARGETS = {
     "norway.html":  ("Norway",  "NORWAY_MANIFESTS"),
+    "iceland.html": ("Iceland", "ICELAND_MANIFESTS"),
 }
 
 # Accepted source extensions (case-insensitive). Everything else is ignored.
@@ -184,6 +185,17 @@ def process_image(src: Path, thumb_dir: Path, is_cover: bool
     }
 
 
+def natural_key(path: Path) -> list:
+    """Sort key that treats digit runs as integers, so 2.jpg < 10.jpg.
+
+    Each token becomes (0, int) or (1, str) so mixed types compare safely
+    and numbers always order before letters at the same position.
+    """
+    name = path.name.lower()
+    return [(0, int(t)) if t.isdigit() else (1, t)
+            for t in re.split(r"(\d+)", name) if t]
+
+
 def process_folder(folder: Path, label: str) -> tuple[int, int, dict | None]:
     """Thumb every image in `folder` (non-recursive) and write manifest.json.
 
@@ -194,9 +206,10 @@ def process_folder(folder: Path, label: str) -> tuple[int, int, dict | None]:
     frames: list[dict] = []   # non-cover entries, in filename sort order
     cover_entry: dict | None = None
 
-    # Case-insensitive dedupe + sort. Skip the thumbs/ subfolder itself.
+    # Case-insensitive dedupe + natural sort. Skip the thumbs/ subfolder itself.
     srcs = sorted({p for p in folder.iterdir()
-                   if p.is_file() and p.suffix.lower() in ALL_EXTS})
+                   if p.is_file() and p.suffix.lower() in ALL_EXTS},
+                  key=natural_key)
     for src in srcs:
         is_cover = src.stem.lower() == "cover"
         result = process_image(src, thumb_dir, is_cover)

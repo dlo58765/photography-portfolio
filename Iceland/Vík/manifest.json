@@ -1,0 +1,110 @@
+{
+  "cover": null,
+  "frames": [
+    {
+      "thumb": "thumbs/1.jpg",
+      "full": "1.JPG",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/2.jpg",
+      "full": "2.JPG",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/3.jpg",
+      "full": "3.JPG",
+      "w": 1600,
+      "h": 1200,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/4.jpg",
+      "full": "4.JPG",
+      "w": 1200,
+      "h": 1600,
+      "shape": "portrait"
+    },
+    {
+      "thumb": "thumbs/5.jpg",
+      "full": "5.jpg",
+      "w": 1600,
+      "h": 1201,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/6.jpg",
+      "full": "6.jpg",
+      "w": 1201,
+      "h": 1600,
+      "shape": "portrait"
+    },
+    {
+      "thumb": "thumbs/7.jpg",
+      "full": "7.jpg",
+      "w": 1201,
+      "h": 1600,
+      "shape": "portrait"
+    },
+    {
+      "thumb": "thumbs/10.jpg",
+      "full": "10.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/img_1204.jpg",
+      "full": "IMG_1204.JPG",
+      "w": 1600,
+      "h": 1200,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/s__458924036_0.jpg",
+      "full": "S__458924036_0.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/s__458924037_0.jpg",
+      "full": "S__458924037_0.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/s__458924056_0.jpg",
+      "full": "S__458924056_0.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/s__458924057_0.jpg",
+      "full": "S__458924057_0.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/s__458924059_0.jpg",
+      "full": "S__458924059_0.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/s__458924060_0.jpg",
+      "full": "S__458924060_0.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    }
+  ]
+}

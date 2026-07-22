@@ -1,0 +1,47 @@
+{
+  "cover": null,
+  "frames": [
+    {
+      "thumb": "thumbs/1.jpg",
+      "full": "1.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/2.jpg",
+      "full": "2.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/3.jpg",
+      "full": "3.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/4.jpg",
+      "full": "4.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/5.jpg",
+      "full": "5.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/6.jpg",
+      "full": "6.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    }
+  ]
+}

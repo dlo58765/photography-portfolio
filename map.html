@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Map - Norway</title>
+    <title>Photography Map</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
     <style>
@@ -327,25 +327,37 @@
     </div>
 
     <script src="locations-data.js"></script>
-    <script src="norway-manifests.js"></script>
     <script>
-        // 使用導入的地點數據
-        const locations = LOCATIONS_DATA;
+        // ===== 判斷要顯示哪一個系列 =====
+        // ?series=iceland  →  冰島  ;  預設為挪威
+        const params = new URLSearchParams(window.location.search);
+        const series = (params.get('series') || 'norway').toLowerCase();
 
-        // 從 norway-manifests.js 引入的數據已經設置在 window.NORWAY_MANIFESTS
-        let manifests = window.NORWAY_MANIFESTS || {};
+        const SERIES = {
+            norway: {
+                locations: LOCATIONS_DATA,
+                targetHtml: 'norway.html',
+                center: [69.2, 16.0],
+                zoom: 6.8,
+                minZoom: 6
+            },
+            iceland: {
+                locations: ICELAND_LOCATIONS_DATA,
+                targetHtml: 'iceland.html',
+                center: [64.9, -18.5],
+                zoom: 6.4,
+                minZoom: 5
+            }
+        };
 
-        // 初始化地圖 - 限制在挪威北部範圍內
-        const norwayBounds = L.latLngBounds(
-            L.latLng(67.5, 12.5),  // 西南角
-            L.latLng(70.5, 20.5)   // 東北角
-        );
+        const cfg = SERIES[series] || SERIES.norway;
+        const locations = cfg.locations;
 
         const map = L.map('map', {
-            minZoom: 6,
+            minZoom: cfg.minZoom,
             maxZoom: 19
         });
-        map.setView([69.2, 16.0], 6.8);
+        map.setView(cfg.center, cfg.zoom);
 
         L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
             attribution: 'Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.',
@@ -355,10 +367,8 @@
 
         // 建立標記
         const markers = {};
-        let activeMarker = null;
 
         function createMarkers() {
-            // 添加標記和彈出窗口
             Object.entries(locations).forEach(([key, location]) => {
                 const markerHtml = `
                     <div class="pulse-marker" data-key="${key}">
@@ -384,14 +394,13 @@
                 });
 
                 marker.on('click', () => {
-                    window.location.href = `norway.html#stop-${location.number}`;
+                    window.location.href = `${cfg.targetHtml}#stop-${location.number}`;
                 });
 
                 markers[key] = marker;
             });
         }
 
-        // 初始化標記
         createMarkers();
     </script>
 </body>

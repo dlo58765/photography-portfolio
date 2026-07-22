@@ -1,0 +1,103 @@
+{
+  "cover": null,
+  "frames": [
+    {
+      "thumb": "thumbs/1.jpg",
+      "full": "1.jpg",
+      "w": 1600,
+      "h": 900,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/2.jpg",
+      "full": "2.jpg",
+      "w": 1600,
+      "h": 900,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/3.jpg",
+      "full": "3.jpg",
+      "w": 900,
+      "h": 1600,
+      "shape": "portrait"
+    },
+    {
+      "thumb": "thumbs/4.jpg",
+      "full": "4.jpg",
+      "w": 1067,
+      "h": 1600,
+      "shape": "portrait"
+    },
+    {
+      "thumb": "thumbs/5.jpg",
+      "full": "5.jpg",
+      "w": 1067,
+      "h": 1600,
+      "shape": "portrait"
+    },
+    {
+      "thumb": "thumbs/s__458907700_0.jpg",
+      "full": "S__458907700_0.jpg",
+      "w": 1600,
+      "h": 900,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/s__458907701_0.jpg",
+      "full": "S__458907701_0.jpg",
+      "w": 1600,
+      "h": 1201,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/s__458907702_0.jpg",
+      "full": "S__458907702_0.jpg",
+      "w": 1600,
+      "h": 900,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/s__458924040_0.jpg",
+      "full": "S__458924040_0.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/s__458924041_0.jpg",
+      "full": "S__458924041_0.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/s__458924042_0.jpg",
+      "full": "S__458924042_0.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/s__458924043_0.jpg",
+      "full": "S__458924043_0.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/s__458924044_0.jpg",
+      "full": "S__458924044_0.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    },
+    {
+      "thumb": "thumbs/s__458924045_0.jpg",
+      "full": "S__458924045_0.jpg",
+      "w": 1600,
+      "h": 1067,
+      "shape": "wide"
+    }
+  ]
+}
