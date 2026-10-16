@@ -62,6 +62,7 @@
             right: 0;
             bottom: 0;
             z-index: 1;
+            background: #232326; /* 圖磚載入前與 Esri 暗色底圖同色，避免露出淺灰 */
         }
 
         .location-list {
@@ -359,9 +360,15 @@
         });
         map.setView(cfg.center, cfg.zoom);
 
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
-            attribution: 'Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.',
-            subdomains: 'abcd',
+        // CARTO 底圖現在需要 API key，改用免 key 的 Esri Dark Gray Canvas（底圖 + 地名標籤）
+        const ESRI_CANVAS = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas';
+        L.tileLayer(`${ESRI_CANVAS}/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}`, {
+            attribution: 'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors',
+            maxNativeZoom: 16,
+            maxZoom: 19
+        }).addTo(map);
+        L.tileLayer(`${ESRI_CANVAS}/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}`, {
+            maxNativeZoom: 16,
             maxZoom: 19
         }).addTo(map);
 

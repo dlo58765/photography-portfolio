@@ -31,7 +31,8 @@ Structure the tool now expects:
         manifest.json           <- generated
 
 Re-run this anytime you add / rename / delete photos. Existing thumbs are
-overwritten only if the source file is newer than the thumb.
+overwritten only if the source file is newer than the thumb, and thumbs
+whose source photo has been deleted are removed.
 """
 
 import json
@@ -185,6 +186,31 @@ def process_image(src: Path, thumb_dir: Path, is_cover: bool
     }
 
 
+def prune_stale_thumbs(thumb_dir: Path, srcs: list[Path]) -> int:
+    """Delete thumbs/*.jpg whose source photo no longer exists; return count.
+
+    The keep-set is built from every source file (not just the ones that
+    processed OK), so a HEIC skipped for lack of pillow-heif keeps its thumb.
+    Names compare lowercased to match how thumbs are written.
+    """
+    if not thumb_dir.is_dir():
+        return 0
+    keep = set()
+    for src in srcs:
+        stem_lower = src.stem.lower()
+        keep.add(f"{stem_lower}.jpg")
+        if src.suffix.lower() in HEIC_EXTS:
+            keep.add(f"{stem_lower}.full.jpg")
+    removed = 0
+    for thumb in sorted(thumb_dir.iterdir()):
+        if (thumb.is_file() and thumb.suffix.lower() == ".jpg"
+                and thumb.name.lower() not in keep):
+            thumb.unlink()
+            removed += 1
+            print(f"  [stale] removed thumbs/{thumb.name}")
+    return removed
+
+
 def natural_key(path: Path) -> list:
     """Sort key that treats digit runs as integers, so 2.jpg < 10.jpg.
 
@@ -225,6 +251,8 @@ def process_folder(folder: Path, label: str) -> tuple[int, int, dict | None]:
             cover_entry = entry
         else:
             frames.append(entry)
+
+    prune_stale_thumbs(thumb_dir, srcs)
 
     # Only chapter folders (those with actual frames) get a manifest.
     # The series root — Norway/, Iceland/ — usually holds only cover.jpg;

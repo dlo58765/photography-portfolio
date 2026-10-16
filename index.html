@@ -10,12 +10,12 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="RexChen | Photography Portfolio" />
     <meta property="og:description" content="Street, travel and portrait photography — built on light, composition, and the quiet weight of a moment." />
-    <meta property="og:image" content="Top.jpg" />
+    <meta property="og:image" content="https://dlo58765.github.io/photography-portfolio/Top.jpg" />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="RexChen | Photography Portfolio" />
     <meta name="twitter:description" content="Street, travel and portrait photography by RexChen." />
-    <meta name="twitter:image" content="Top.jpg" />
+    <meta name="twitter:image" content="https://dlo58765.github.io/photography-portfolio/Top.jpg" />
     <meta name="theme-color" content="#0a0a0c" />
 
     <!-- Favicon (inline SVG — no extra file needed) -->
@@ -95,7 +95,7 @@
 
       <section id="series" class="series snap-section">
         <a class="series-card reveal" href="norway.html" aria-label="View Norway series">
-          <div class="series-bg" style="background-image: url('Norway/cover.jpg');"></div>
+          <div class="series-bg" style="background-image: url('Norway/thumbs/cover.jpg');"></div>
           <div class="series-shade"></div>
           <div class="series-body">
             <span class="series-index">CHAPTER 01</span>
@@ -108,7 +108,7 @@
           </div>
         </a>
         <a class="series-card reveal" href="iceland.html" aria-label="View Iceland series">
-          <div class="series-bg" style="background-image: url('Iceland/cover.jpg');"></div>
+          <div class="series-bg" style="background-image: url('Iceland/thumbs/cover.jpg');"></div>
           <div class="series-shade"></div>
           <div class="series-body">
             <span class="series-index">CHAPTER 02</span>
@@ -192,15 +192,9 @@
         requestAnimationFrame(animateRing);
       }
       animateRing();
-      document.querySelectorAll('a, button, .work-image, .btn').forEach((el) => {
-        const isImage = el.classList.contains('work-image');
-        el.addEventListener('mouseenter', () => {
-          cursorRing.classList.add('is-hover');
-          if (isImage) cursorRing.classList.add('is-view');
-        });
-        el.addEventListener('mouseleave', () => {
-          cursorRing.classList.remove('is-hover', 'is-view');
-        });
+      document.querySelectorAll('a, button, .btn').forEach((el) => {
+        el.addEventListener('mouseenter', () => cursorRing.classList.add('is-hover'));
+        el.addEventListener('mouseleave', () => cursorRing.classList.remove('is-hover'));
       });
 
       const mainElement = document.querySelector('main');
@@ -237,50 +231,7 @@
         }, 800);
       }
 
-      // ===== Hover-zoom on work images (wheel scales the image) =====
-      const workImages = Array.from(document.querySelectorAll('.work-image'));
-      const zoomState = new Map();
-      workImages.forEach((el) => {
-        zoomState.set(el, { scale: 1, x: 50, y: 50 });
-        el.style.transition = 'background-size 0.25s ease, background-position 0.15s ease';
-        el.addEventListener('mousemove', (e) => {
-          const state = zoomState.get(el);
-          if (state.scale <= 1) return;
-          const rect = el.getBoundingClientRect();
-          state.x = ((e.clientX - rect.left) / rect.width) * 100;
-          state.y = ((e.clientY - rect.top) / rect.height) * 100;
-          el.style.backgroundPosition = `${state.x}% ${state.y}%`;
-        });
-        el.addEventListener('mouseleave', () => {
-          const state = zoomState.get(el);
-          state.scale = 1;
-          state.x = 50; state.y = 50;
-          el.style.backgroundSize = 'contain';
-          el.style.backgroundPosition = 'center';
-          el.classList.remove('is-zoomed');
-        });
-      });
-
       mainElement.addEventListener('wheel', (event) => {
-        // If hovering a work image, wheel zooms instead of scrolling pages
-        const hoveredImg = workImages.find((el) => el.matches(':hover'));
-        if (hoveredImg) {
-          event.preventDefault();
-          const state = zoomState.get(hoveredImg);
-          const step = event.deltaY > 0 ? -0.15 : 0.15;
-          state.scale = Math.max(1, Math.min(3.5, state.scale + step));
-          if (state.scale > 1) {
-            hoveredImg.classList.add('is-zoomed');
-            hoveredImg.style.backgroundSize = `${state.scale * 100}%`;
-            hoveredImg.style.backgroundPosition = `${state.x}% ${state.y}%`;
-          } else {
-            hoveredImg.classList.remove('is-zoomed');
-            hoveredImg.style.backgroundSize = 'contain';
-            hoveredImg.style.backgroundPosition = 'center';
-          }
-          return;
-        }
-
         if (isScrolling) {
           event.preventDefault();
           return;
