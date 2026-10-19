@@ -718,11 +718,11 @@ html.gallery-page body::before {
   opacity: 1;
   pointer-events: auto;
 }
+.chapter-rail:hover { background: rgba(10, 10, 12, 0.9); }
 .chapter-rail-link {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 14px;
   padding: 4px 4px 4px 6px;
   color: var(--muted);
   text-decoration: none;
@@ -742,17 +742,21 @@ html.gallery-page body::before {
 .chapter-rail-label {
   opacity: 0;
   transform: translateX(-6px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, margin-left 0.3s ease;
   max-width: 0;
+  margin-left: 0;
   overflow: hidden;
   white-space: nowrap;
   color: var(--text);
 }
-.chapter-rail:hover .chapter-rail-label,
-.chapter-rail-link.is-active .chapter-rail-label {
+/* Labels only on hover: kept open for the active chapter, the rail grew
+ * wide enough to cover the chapter text beside it. The gold dot marks
+ * the active chapter. */
+.chapter-rail:hover .chapter-rail-label {
   opacity: 1;
   transform: translateX(0);
   max-width: 180px;
+  margin-left: 14px;
 }
 .chapter-rail-link:hover .chapter-rail-dot {
   background: var(--muted-strong);
@@ -790,6 +794,10 @@ html.gallery-page body::before {
   max-width: 1600px;
   margin: 0 auto;
   padding: 4vh 6vw 4vh;
+}
+@media (min-width: 901px) {
+  /* Keep content clear of the fixed chapter rail on the right. */
+  .chapters { padding-right: max(6vw, 96px); }
 }
 /* --- Chapters --- there are two layouts depending on whether the folder
  * has a cover.jpg:
@@ -878,6 +886,7 @@ html.gallery-page body::before {
   font-style: normal;
   font-size: 0.72rem;
   letter-spacing: 0.28em;
+  line-height: 1.7;   /* the title's tight 1.02 made wrapped lines touch */
   text-transform: uppercase;
   color: var(--muted);
   margin-top: 12px;
