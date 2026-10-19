@@ -3,108 +3,153 @@
   "frames": [
     {
       "thumb": "thumbs/1.jpg",
-      "full": "1.JPG",
+      "full": "thumbs/1.lg.jpg",
       "w": 1600,
       "h": 1067,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2560,
+      "md": "thumbs/1.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/2.jpg",
-      "full": "2.JPG",
+      "full": "thumbs/2.lg.jpg",
       "w": 1600,
       "h": 1067,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2560,
+      "md": "thumbs/2.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/3.jpg",
-      "full": "3.JPG",
+      "full": "thumbs/3.lg.jpg",
       "w": 1600,
       "h": 1200,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2560,
+      "md": "thumbs/3.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/4.jpg",
-      "full": "4.JPG",
+      "full": "thumbs/4.lg.jpg",
       "w": 1200,
       "h": 1600,
-      "shape": "portrait"
+      "shape": "portrait",
+      "full_w": 1920,
+      "md": "thumbs/4.md.jpg",
+      "md_w": 900
     },
     {
       "thumb": "thumbs/5.jpg",
       "full": "5.jpg",
       "w": 1600,
       "h": 1201,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2364,
+      "md": "thumbs/5.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/6.jpg",
       "full": "6.jpg",
       "w": 1201,
       "h": 1600,
-      "shape": "portrait"
+      "shape": "portrait",
+      "full_w": 1774,
+      "md": "thumbs/6.md.jpg",
+      "md_w": 901
     },
     {
       "thumb": "thumbs/7.jpg",
       "full": "7.jpg",
       "w": 1201,
       "h": 1600,
-      "shape": "portrait"
+      "shape": "portrait",
+      "full_w": 1774,
+      "md": "thumbs/7.md.jpg",
+      "md_w": 901
     },
     {
       "thumb": "thumbs/10.jpg",
       "full": "10.jpg",
       "w": 1600,
       "h": 1067,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 1600,
+      "md": "thumbs/10.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/img_1204.jpg",
       "full": "IMG_1204.JPG",
       "w": 1600,
       "h": 1200,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 4032,
+      "md": "thumbs/img_1204.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/s__458924036_0.jpg",
       "full": "S__458924036_0.jpg",
       "w": 1600,
       "h": 1067,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2508,
+      "md": "thumbs/s__458924036_0.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/s__458924037_0.jpg",
       "full": "S__458924037_0.jpg",
       "w": 1600,
       "h": 1067,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2508,
+      "md": "thumbs/s__458924037_0.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/s__458924056_0.jpg",
       "full": "S__458924056_0.jpg",
       "w": 1600,
       "h": 1067,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2508,
+      "md": "thumbs/s__458924056_0.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/s__458924057_0.jpg",
       "full": "S__458924057_0.jpg",
       "w": 1600,
       "h": 1067,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2508,
+      "md": "thumbs/s__458924057_0.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/s__458924059_0.jpg",
       "full": "S__458924059_0.jpg",
       "w": 1600,
       "h": 1067,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2508,
+      "md": "thumbs/s__458924059_0.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/s__458924060_0.jpg",
       "full": "S__458924060_0.jpg",
       "w": 1600,
       "h": 1067,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2508,
+      "md": "thumbs/s__458924060_0.md.jpg",
+      "md_w": 1200
     }
   ]
 }

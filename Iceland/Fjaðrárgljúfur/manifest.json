@@ -6,63 +6,90 @@
       "full": "S__458907727_0.jpg",
       "w": 1600,
       "h": 900,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2730,
+      "md": "thumbs/s__458907727_0.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/s__458907728_0.jpg",
       "full": "S__458907728_0.jpg",
       "w": 900,
       "h": 1600,
-      "shape": "portrait"
+      "shape": "portrait",
+      "full_w": 1536,
+      "md": "thumbs/s__458907728_0.md.jpg",
+      "md_w": 675
     },
     {
       "thumb": "thumbs/s__458907730_0.jpg",
       "full": "S__458907730_0.jpg",
       "w": 900,
       "h": 1600,
-      "shape": "portrait"
+      "shape": "portrait",
+      "full_w": 1536,
+      "md": "thumbs/s__458907730_0.md.jpg",
+      "md_w": 675
     },
     {
       "thumb": "thumbs/s__458907731_0.jpg",
       "full": "S__458907731_0.jpg",
       "w": 1600,
       "h": 900,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2730,
+      "md": "thumbs/s__458907731_0.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/s__458907732_0.jpg",
       "full": "S__458907732_0.jpg",
       "w": 1600,
       "h": 900,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2730,
+      "md": "thumbs/s__458907732_0.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/s__458907733_0.jpg",
       "full": "S__458907733_0.jpg",
       "w": 1600,
       "h": 900,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2730,
+      "md": "thumbs/s__458907733_0.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/s__458907734_0.jpg",
       "full": "S__458907734_0.jpg",
       "w": 1201,
       "h": 1600,
-      "shape": "portrait"
+      "shape": "portrait",
+      "full_w": 1774,
+      "md": "thumbs/s__458907734_0.md.jpg",
+      "md_w": 901
     },
     {
       "thumb": "thumbs/s__458907735_0.jpg",
       "full": "S__458907735_0.jpg",
       "w": 1600,
       "h": 900,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2730,
+      "md": "thumbs/s__458907735_0.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/s__458907736_0.jpg",
       "full": "S__458907736_0.jpg",
       "w": 1600,
       "h": 900,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2730,
+      "md": "thumbs/s__458907736_0.md.jpg",
+      "md_w": 1200
     }
   ]
 }

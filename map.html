@@ -3,22 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Map</title>
+    <title>Map · RexChen Photography</title>
+    <meta name="description" content="Where each frame was made — the stops of RexChen's Norway and Iceland chapters on a map." />
+    <meta name="theme-color" content="#0a0a0c" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230a0a0c'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' font-style='italic' fill='%23c8a96b' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
     <style>
         :root {
-            --bg: #090b12;
-            --surface: rgba(14, 19, 34, 0.96);
             --text: #f5f4ef;
-            --muted: #9aa0ac;
-            --muted-strong: #c8c8c6;
             --accent: #7ec7ff;
-            --accent-strong: #55a8ff;
-            --border: rgba(255, 255, 255, 0.08);
-            --shadow: 0 30px 90px rgba(0, 0, 0, 0.22);
-            --radius: 22px;
-            --radius-sm: 14px;
             --transition: 0.28s ease;
         }
 
@@ -31,17 +25,7 @@
         html, body {
             width: 100%;
             height: 100%;
-            min-height: 100vh;
-            margin: 0;
-            padding: 0;
             overflow: hidden;
-        }
-
-        .container, #map {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
         }
 
         body {
@@ -53,63 +37,22 @@
 
         .container {
             position: relative;
+            width: 100%;
+            height: 100%;
         }
 
         #map {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            inset: 0;
             z-index: 1;
             background: #232326; /* 圖磚載入前與 Esri 暗色底圖同色，避免露出淺灰 */
         }
 
-        .location-list {
-            display: none;
-        }
-
-        .location-item {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 18px;
-            padding: 18px 18px 16px;
-            cursor: pointer;
-            transition: transform var(--transition), border-color var(--transition), background var(--transition), box-shadow var(--transition), opacity var(--transition);
-            position: relative;
-            overflow: hidden;
-            opacity: 0;
-            transform: translateX(-10px);
-            animation: slideInItem 0.45s ease forwards;
-        }
-
-        .location-item::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 70%);
-            pointer-events: none;
-        }
-
-        .location-item:hover {
-            transform: translateX(4px);
-            border-color: rgba(126, 199, 255, 0.45);
-            background: rgba(126, 199, 255, 0.08);
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
-        }
-
-        @keyframes slideInItem {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
+        /* Marker: a 34px box whose centre is the location (iconAnchor 17,17). */
         .pulse-marker {
             width: 34px;
             height: 34px;
             position: relative;
-            transform: translate(-50%, -50%);
             animation: float-marker 4s ease-in-out infinite;
         }
 
@@ -145,7 +88,6 @@
             transition: transform var(--transition), background var(--transition), box-shadow var(--transition), border-color var(--transition);
         }
 
-        .pulse-marker.active .marker-core,
         .pulse-marker:hover .marker-core {
             background: #ffd568;
             transform: translate(-50%, -50%) scale(1.25);
@@ -170,27 +112,11 @@
 
         @keyframes float-marker {
             0%, 100% {
-                transform: translate(-50%, -50%) translateY(0px);
+                transform: translateY(0);
             }
             50% {
-                transform: translate(-50%, -50%) translateY(-2px);
+                transform: translateY(-2px);
             }
-        }
-
-        .location-item.active {
-            background: rgba(126, 199, 255, 0.16);
-            border-color: rgba(126, 199, 255, 0.7);
-        }
-
-        .location-name {
-            font-weight: 700;
-            font-size: 1rem;
-            margin-bottom: 6px;
-        }
-
-        .location-count {
-            font-size: 0.95rem;
-            color: var(--muted);
         }
 
         .map-tip {
@@ -209,114 +135,47 @@
             max-width: min(320px, calc(100vw - 46px));
         }
 
-        .toggle-sidebar {
-            display: none;
-        }
-
         .map-tip strong {
             color: var(--accent);
         }
 
-        .leaflet-popup-content {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: var(--text);
-            text-align: left;
-        }
-
-        .leaflet-popup-content-wrapper {
-            background: rgba(11, 16, 29, 0.98);
-            border: 1px solid rgba(126, 199, 255, 0.18);
-            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
-            border-radius: 18px;
-        }
-
-        .leaflet-popup-tip {
-            filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.16));
-        }
-
-        .leaflet-popup-pane,
-        .leaflet-popup-tip {
-            box-shadow: none;
-        }
-
-        .popup-content {
-            text-align: center;
-        }
-
-        .popup-title {
-            font-weight: 800;
-            font-size: 1.05rem;
-            margin-bottom: 10px;
-            color: #ffffff;
-            letter-spacing: 0.01em;
-        }
-
-        .popup-info {
-            font-size: 0.97rem;
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 14px;
-        }
-
-        .popup-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 16px;
+        /* "← Norway" link, a Leaflet control stacked above the zoom buttons. */
+        .leaflet-control.map-back {
+            display: inline-block;
+            padding: 7px 14px;
             border-radius: 999px;
-            background: var(--accent);
-            color: #090b12;
+            background: rgba(7, 12, 24, 0.86);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--text);
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
             text-decoration: none;
-            font-size: 0.95rem;
-            transition: background var(--transition);
+            backdrop-filter: blur(16px);
+            transition: border-color var(--transition);
         }
 
-        .popup-btn:hover {
-            background: var(--accent-strong);
+        .leaflet-control.map-back:hover {
+            border-color: rgba(255, 199, 102, 0.6);
+            color: var(--text);
         }
 
         @media (max-width: 768px) {
-            .toggle-sidebar {
-                width: 38px;
-                height: 38px;
-                font-size: 18px;
-            }
-
-            .toggle-sidebar.is-open {
-                left: 20px;
-            }
-
-            .sidebar {
-                width: 100%;
-            }
-
-            .sidebar.is-open {
-                transform: translateX(0);
-            }
-
-            .sidebar {
-                padding-top: 82px;
-            }
-
+            /* Top right, beside the Back control, so it never covers the
+               attribution along the bottom edge. */
             .map-tip {
-                right: 20px;
-                top: auto;
-                bottom: 20px;
-                left: auto;
+                top: 10px;
+                right: 10px;
+                padding: 8px 12px;
+                border-radius: 14px;
+                font-size: 0.82rem;
+                max-width: calc(100vw - 150px);
             }
         }
 
-        @media (max-width: 640px) {
-            .sidebar {
-                padding: 18px 16px 18px;
-            }
-
-            .sidebar-header {
-                font-size: 1.6rem;
-            }
-
-            .sidebar-summary span {
-                width: 100%;
-                justify-content: space-between;
+        @media (prefers-reduced-motion: reduce) {
+            .pulse-marker,
+            .pulse-marker .pulse-ring {
+                animation: none;
             }
         }
     </style>
@@ -336,29 +195,47 @@
 
         const SERIES = {
             norway: {
+                label: 'Norway',
                 locations: LOCATIONS_DATA,
-                targetHtml: 'norway.html',
-                center: [69.2, 16.0],
-                zoom: 6.8,
-                minZoom: 6
+                targetHtml: 'norway.html'
             },
             iceland: {
+                label: 'Iceland',
                 locations: ICELAND_LOCATIONS_DATA,
-                targetHtml: 'iceland.html',
-                center: [64.9, -18.5],
-                zoom: 6.4,
-                minZoom: 5
+                targetHtml: 'iceland.html'
             }
         };
 
         const cfg = SERIES[series] || SERIES.norway;
         const locations = cfg.locations;
+        document.title = `${cfg.label} Map · RexChen Photography`;
 
+        // 縮放維持整數級距：小數級距會讓圖磚接縫出現細線
         const map = L.map('map', {
-            minZoom: cfg.minZoom,
+            zoomControl: false,
             maxZoom: 19
         });
-        map.setView(cfg.center, cfg.zoom);
+
+        // 返回相冊：放在左上角、縮放按鈕上方
+        const BackControl = L.Control.extend({
+            options: { position: 'topleft' },
+            onAdd() {
+                const link = L.DomUtil.create('a', 'map-back');
+                link.href = cfg.targetHtml;
+                link.textContent = `← ${cfg.label}`;
+                L.DomEvent.disableClickPropagation(link);
+                return link;
+            }
+        });
+        new BackControl().addTo(map);
+        L.control.zoom({ position: 'topleft' }).addTo(map);
+
+        // 依所有地點自動縮放，任何螢幕尺寸都能看到全部標記
+        // （上方多留空間給返回鈕與提示框）
+        const bounds = L.latLngBounds(Object.values(locations).map((l) => [l.lat, l.lng]));
+        map.fitBounds(bounds, { paddingTopLeft: [48, 96], paddingBottomRight: [48, 48] });
+        // 可以比預設再拉遠一點，但不會縮到整個世界
+        map.setMinZoom(Math.max(map.getZoom() - 1, 3));
 
         // CARTO 底圖現在需要 API key，改用免 key 的 Esri Dark Gray Canvas（底圖 + 地名標籤）
         const ESRI_CANVAS = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas';
@@ -387,8 +264,8 @@
                     icon: L.divIcon({
                         className: 'custom-div-icon',
                         html: markerHtml,
-                        iconSize: [28, 28],
-                        iconAnchor: [14, 14]
+                        iconSize: [34, 34],
+                        iconAnchor: [17, 17]
                     }),
                     title: location.name
                 }).addTo(map);
@@ -396,6 +273,7 @@
                 marker.bindTooltip(location.name, {
                     permanent: false,
                     direction: 'top',
+                    offset: [0, -14],
                     opacity: 0.9,
                     className: 'location-tooltip'
                 });

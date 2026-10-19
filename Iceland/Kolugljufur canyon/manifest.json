@@ -3,66 +3,93 @@
   "frames": [
     {
       "thumb": "thumbs/1.jpg",
-      "full": "1.jpg",
+      "full": "thumbs/1.lg.jpg",
       "w": 1600,
       "h": 1067,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2560,
+      "md": "thumbs/1.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/2.jpg",
       "full": "2.jpg",
       "w": 1600,
       "h": 1069,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 1616,
+      "md": "thumbs/2.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/3.jpg",
       "full": "3.jpg",
       "w": 1600,
       "h": 1069,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 1616,
+      "md": "thumbs/3.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/4.jpg",
       "full": "4.jpg",
       "w": 1600,
       "h": 1504,
-      "shape": "square"
+      "shape": "square",
+      "full_w": 1875,
+      "md": "thumbs/4.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/5.jpg",
       "full": "5.jpg",
       "w": 1600,
       "h": 1069,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 1616,
+      "md": "thumbs/5.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/6.jpg",
       "full": "6.jpg",
       "w": 1600,
       "h": 1069,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 1616,
+      "md": "thumbs/6.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/8.jpg",
       "full": "8.jpg",
       "w": 1069,
       "h": 1600,
-      "shape": "portrait"
+      "shape": "portrait",
+      "full_w": 1080,
+      "md": "thumbs/8.md.jpg",
+      "md_w": 802
     },
     {
       "thumb": "thumbs/9.jpg",
       "full": "9.jpg",
       "w": 1600,
       "h": 1069,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 1616,
+      "md": "thumbs/9.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/10.jpg",
       "full": "10.jpg",
       "w": 1600,
       "h": 1067,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2508,
+      "md": "thumbs/10.md.jpg",
+      "md_w": 1200
     }
   ]
 }

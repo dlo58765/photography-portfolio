@@ -6,70 +6,100 @@
       "full": "1.jpg",
       "w": 1600,
       "h": 900,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2730,
+      "md": "thumbs/1.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/2.jpg",
       "full": "2.jpg",
       "w": 1600,
       "h": 900,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2729,
+      "md": "thumbs/2.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/3.jpg",
       "full": "3.jpg",
       "w": 1600,
       "h": 900,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2730,
+      "md": "thumbs/3.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/4.jpg",
       "full": "4.jpg",
       "w": 1600,
       "h": 1201,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2364,
+      "md": "thumbs/4.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/5.jpg",
       "full": "5.jpg",
       "w": 1201,
       "h": 1600,
-      "shape": "portrait"
+      "shape": "portrait",
+      "full_w": 1774,
+      "md": "thumbs/5.md.jpg",
+      "md_w": 901
     },
     {
       "thumb": "thumbs/6.jpg",
       "full": "6.jpg",
       "w": 1200,
       "h": 1600,
-      "shape": "portrait"
+      "shape": "portrait",
+      "full_w": 1773,
+      "md": "thumbs/6.md.jpg",
+      "md_w": 900
     },
     {
       "thumb": "thumbs/7.jpg",
       "full": "7.jpg",
       "w": 1600,
       "h": 1067,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2508,
+      "md": "thumbs/7.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/8.jpg",
-      "full": "8.JPG",
+      "full": "thumbs/8.lg.jpg",
       "w": 1600,
       "h": 1200,
-      "shape": "wide"
+      "shape": "wide",
+      "full_w": 2560,
+      "md": "thumbs/8.md.jpg",
+      "md_w": 1200
     },
     {
       "thumb": "thumbs/9.jpg",
       "full": "9.jpg",
       "w": 1201,
       "h": 1600,
-      "shape": "portrait"
+      "shape": "portrait",
+      "full_w": 1774,
+      "md": "thumbs/9.md.jpg",
+      "md_w": 901
     },
     {
       "thumb": "thumbs/10.jpg",
       "full": "10.jpg",
       "w": 1201,
       "h": 1600,
-      "shape": "portrait"
+      "shape": "portrait",
+      "full_w": 1774,
+      "md": "thumbs/10.md.jpg",
+      "md_w": 901
     }
   ]
 }

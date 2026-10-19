@@ -7,6 +7,10 @@ For every image found in each chapter folder:
   - writes a downscaled JPEG to <folder>/thumbs/<stem>.jpg (max 1600px on
     the long edge, quality 82). cover.jpg / cover.png / cover.heic get the
     larger 2400px "hero" size.
+  - for every non-cover frame, also writes <stem>.md.jpg (max 1200px) so
+    phones can pick a smaller file through srcset.
+  - for JPG/PNG originals heavier than 3MB, writes <stem>.lg.jpg (max
+    2560px) and the lightbox uses that instead of the original.
   - for HEIC originals, ALSO writes a full-resolution JPEG next to the
     thumb at <folder>/thumbs/<stem>.full.jpg — browsers can't display HEIC,
     so the lightbox needs a JPEG copy.
@@ -82,9 +86,12 @@ PNG_EXT   = ".png"
 HEIC_EXTS = {".heic", ".heif"}
 ALL_EXTS  = JPEG_EXTS | {PNG_EXT} | HEIC_EXTS
 
-THUMB_MAX = 1600      # px on the long edge — grid tiles
-HERO_MAX  = 2400      # px on the long edge — cover.* for hero background
-QUALITY   = 82
+THUMB_MAX  = 1600     # px on the long edge — grid tiles
+MEDIUM_MAX = 1200     # px on the long edge — phone-sized srcset candidate
+HERO_MAX   = 2400     # px on the long edge — cover.* for hero background
+LARGE_MAX  = 2560     # px on the long edge — lightbox copy of heavy originals
+HEAVY_BYTES = 3 * 1024 * 1024   # originals above this get a .lg.jpg
+QUALITY    = 82
 
 
 def save_jpeg(im: Image.Image, dst: Path, max_edge: int) -> None:
@@ -130,19 +137,59 @@ def read_dims(path: Path) -> tuple[int, int] | None:
         return None
 
 
+def header_width(path: Path) -> int:
+    """Display width honoring EXIF orientation, from the header only (fast
+    even for 20MB originals). 0 if unreadable."""
+    try:
+        with Image.open(path) as im:
+            w, h = im.size
+            if im.getexif().get(0x0112, 1) in (5, 6, 7, 8):   # rotated 90/270
+                w, h = h, w
+            return w
+    except Exception:
+        return 0
+
+
+def is_heavy(src: Path) -> bool:
+    """True if the lightbox should get a .lg.jpg instead of the original."""
+    return (src.suffix.lower() not in HEIC_EXTS
+            and src.stem.lower() != "cover"
+            and src.stat().st_size > HEAVY_BYTES)
+
+
+def thumb_names(src: Path) -> set[str]:
+    """Every file process_image() may write under thumbs/ for `src`."""
+    stem_lower = src.stem.lower()
+    names = {f"{stem_lower}.jpg"}
+    if src.suffix.lower() in HEIC_EXTS:
+        names.add(f"{stem_lower}.full.jpg")
+    if stem_lower != "cover":
+        names.add(f"{stem_lower}.md.jpg")
+    if is_heavy(src):
+        names.add(f"{stem_lower}.lg.jpg")
+    return names
+
+
 def process_image(src: Path, thumb_dir: Path, is_cover: bool
                   ) -> tuple[int, dict] | None:
     """Produce thumb (and, for HEIC, a display-JPEG); return (wrote_n, entry).
 
-    entry is the manifest record: {"thumb", "full", "w", "h", "shape"}.
-    Paths are relative to the chapter folder; w/h are the display pixels
-    (post EXIF-rotate); shape is one of wide|portrait|square. Returns None
-    to skip (unreadable HEIC with no pillow-heif installed, or errors).
+    entry is the manifest record: {"thumb", "full", "w", "h", "shape",
+    "full_w"} plus {"md", "md_w"} for non-cover frames. Paths are relative
+    to the chapter folder; w/h are the thumb's display pixels (post
+    EXIF-rotate); *_w are widths for srcset; shape is one of
+    wide|portrait|square. Returns None to skip (unreadable HEIC with no
+    pillow-heif installed, or errors).
     """
     ext = src.suffix.lower()
     stem_lower = src.stem.lower()
     max_edge = HERO_MAX if is_cover else THUMB_MAX
     thumb = thumb_dir / f"{stem_lower}.jpg"
+    # Covers are only used as CSS backgrounds, so they skip the srcset sizes.
+    extras = [] if is_cover else [(thumb_dir / f"{stem_lower}.md.jpg", MEDIUM_MAX)]
+    large = thumb_dir / f"{stem_lower}.lg.jpg"
+    if is_heavy(src):
+        extras.append((large, LARGE_MAX))
 
     wrote = 0
     try:
@@ -168,6 +215,17 @@ def process_image(src: Path, thumb_dir: Path, is_cover: bool
                 wrote = 1
                 print(f"  {src.name:>28}  ->  thumbs/{thumb.name}")
             full_rel = src.name    # browser can show jpg/png natively
+
+        stale = [(dst, edge) for dst, edge in extras if newer(src, dst)]
+        if stale:
+            with Image.open(src) as im:
+                for dst, edge in stale:
+                    save_jpeg(im, dst, edge)
+            wrote = 1
+            print(f"  {src.name:>28}  ->  "
+                  + " + ".join(f"thumbs/{dst.name}" for dst, _ in stale))
+        if is_heavy(src):
+            full_rel = f"thumbs/{large.name}"
     except Exception as e:
         print(f"  [error {e.__class__.__name__}] {src.name}: {e}")
         return None
@@ -177,13 +235,18 @@ def process_image(src: Path, thumb_dir: Path, is_cover: bool
     dims = read_dims(thumb) or read_dims(src) or (0, 0)
     w, h = dims
 
-    return wrote, {
+    entry = {
         "thumb": f"thumbs/{thumb.name}",
         "full":  full_rel,
         "w":     w,
         "h":     h,
         "shape": orientation_of(w, h),
+        "full_w": header_width(src.parent / full_rel),
     }
+    if not is_cover:
+        entry["md"] = f"thumbs/{stem_lower}.md.jpg"
+        entry["md_w"] = header_width(thumb_dir / f"{stem_lower}.md.jpg")
+    return wrote, entry
 
 
 def prune_stale_thumbs(thumb_dir: Path, srcs: list[Path]) -> int:
@@ -197,10 +260,7 @@ def prune_stale_thumbs(thumb_dir: Path, srcs: list[Path]) -> int:
         return 0
     keep = set()
     for src in srcs:
-        stem_lower = src.stem.lower()
-        keep.add(f"{stem_lower}.jpg")
-        if src.suffix.lower() in HEIC_EXTS:
-            keep.add(f"{stem_lower}.full.jpg")
+        keep |= thumb_names(src)
     removed = 0
     for thumb in sorted(thumb_dir.iterdir()):
         if (thumb.is_file() and thumb.suffix.lower() == ".jpg"
