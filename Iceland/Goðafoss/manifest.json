@@ -9,7 +9,8 @@
       "shape": "wide",
       "full_w": 2730,
       "md": "thumbs/1.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Hiker pointing to a long cascade in a steep valley"
     },
     {
       "thumb": "thumbs/2.jpg",
@@ -19,7 +20,8 @@
       "shape": "wide",
       "full_w": 2730,
       "md": "thumbs/2.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Tiered waterfall in a mossy gorge below a snowy peak"
     },
     {
       "thumb": "thumbs/3.jpg",
@@ -29,7 +31,8 @@
       "shape": "portrait",
       "full_w": 1536,
       "md": "thumbs/3.md.jpg",
-      "md_w": 675
+      "md_w": 675,
+      "title": "Hiking boots dangling over a ravine of stepped falls"
     },
     {
       "thumb": "thumbs/4.jpg",
@@ -39,7 +42,8 @@
       "shape": "portrait",
       "full_w": 1672,
       "md": "thumbs/4.md.jpg",
-      "md_w": 800
+      "md_w": 800,
+      "title": "Dark-coated fox foraging in seaweed on black sand"
     },
     {
       "thumb": "thumbs/5.jpg",
@@ -49,7 +53,8 @@
       "shape": "portrait",
       "full_w": 1672,
       "md": "thumbs/5.md.jpg",
-      "md_w": 800
+      "md_w": 800,
+      "title": "Fox nosing through seaweed on a dim beach"
     },
     {
       "thumb": "thumbs/s__458907700_0.jpg",
@@ -59,7 +64,8 @@
       "shape": "wide",
       "full_w": 2730,
       "md": "thumbs/s__458907700_0.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Watching the falls from the river's edge"
     },
     {
       "thumb": "thumbs/s__458907701_0.jpg",
@@ -69,7 +75,8 @@
       "shape": "wide",
       "full_w": 2364,
       "md": "thumbs/s__458907701_0.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Go\u00f0afoss from the rocky riverbank under broken cloud"
     },
     {
       "thumb": "thumbs/s__458907702_0.jpg",
@@ -79,7 +86,8 @@
       "shape": "wide",
       "full_w": 2730,
       "md": "thumbs/s__458907702_0.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Looking down on the horseshoe falls, snowy hills beyond"
     },
     {
       "thumb": "thumbs/s__458924040_0.jpg",
@@ -89,7 +97,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/s__458924040_0.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Snow-dusted layered mountain above dark autumn moorland"
     },
     {
       "thumb": "thumbs/s__458924041_0.jpg",
@@ -99,7 +108,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/s__458924041_0.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Fresh snow on jagged peaks above mossy cliffs"
     },
     {
       "thumb": "thumbs/s__458924042_0.jpg",
@@ -109,7 +119,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/s__458924042_0.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Turquoise plunge pool churning below the curved rim"
     },
     {
       "thumb": "thumbs/s__458924043_0.jpg",
@@ -119,7 +130,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/s__458924043_0.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Steel truss bridge spanning the rocky river gorge"
     },
     {
       "thumb": "thumbs/s__458924044_0.jpg",
@@ -129,7 +141,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/s__458924044_0.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Spray rising as the river pours over a dark cliff"
     },
     {
       "thumb": "thumbs/s__458924045_0.jpg",
@@ -139,7 +152,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/s__458924045_0.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Ice-glazed rocks at the brink of a wide waterfall"
     }
   ]
 }

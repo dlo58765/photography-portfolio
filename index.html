@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RexChen | Photography Portfolio</title>
-    <meta name="description" content="Selected work in street, travel and portrait photography by RexChen — a study of light, space, and the weight of a single frame." />
+    <meta name="description" content="Travel and landscape photography by RexChen — chapters from Arctic Norway and Iceland, a study of light, space, and the weight of a single frame." />
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="RexChen | Photography Portfolio" />
-    <meta property="og:description" content="Street, travel and portrait photography — built on light, composition, and the quiet weight of a moment." />
+    <meta property="og:description" content="Travel and landscape photography from Arctic Norway and Iceland — built on light, composition, and the quiet weight of a moment." />
     <meta property="og:image" content="https://dlo58765.github.io/photography-portfolio/Top.jpg" />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="RexChen | Photography Portfolio" />
-    <meta name="twitter:description" content="Street, travel and portrait photography by RexChen." />
+    <meta name="twitter:description" content="Travel and landscape photography by RexChen — Arctic Norway and Iceland." />
     <meta name="twitter:image" content="https://dlo58765.github.io/photography-portfolio/Top.jpg" />
     <meta name="theme-color" content="#0a0a0c" />
 
@@ -24,8 +24,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="image" href="Top.jpg" />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <!-- Visitor stats: GoatCounter (no cookies; skips localhost) -->
+    <script data-goatcounter="https://dlo58765.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
   </head>
   <body>
     <div class="cursor-dot"></div>
@@ -48,8 +50,8 @@
       </div>
     </nav>
 
-    <main id="top">
-      <section class="hero snap-section">
+    <main>
+      <section id="top" class="hero snap-section">
         <div class="hero-bg" style="background-image: url('Top.jpg');"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content reveal">
@@ -59,7 +61,7 @@
             of <em>light, space,</em><br />
             and stillness.
           </h1>
-          <p class="lead">A slow catalogue of streets, journeys and faces — where the frame is less a record than a place to hold time.</p>
+          <p class="lead">A slow catalogue of coastlines, weather and small northern towns — where the frame is less a record than a place to hold time.</p>
           <a class="btn" href="#portfolio">
             <span>Enter the Work</span>
             <span class="btn-arrow">↓</span>
@@ -74,12 +76,12 @@
           <h2 class="display-sm">A quiet practice,<br /><em>at the edge of light.</em></h2>
           <div class="about-body">
             <p>
-              I photograph what asks to be kept. Restraint over spectacle, detail over declaration — the way a room holds light, the way a face settles into a breath. Each frame is a small argument for slowing down.
+              I photograph what asks to be kept. Restraint over spectacle, detail over declaration — the way a fjord holds the last light, the way weather settles over a harbour town. Each frame is a small argument for slowing down.
             </p>
             <ul class="focus-list">
-              <li><span>01</span> Street &amp; Everyday</li>
-              <li><span>02</span> Travel &amp; Landscape</li>
-              <li><span>03</span> Portrait &amp; Editorial</li>
+              <li><span>01</span> Landscape &amp; Weather</li>
+              <li><span>02</span> Harbours &amp; Small Towns</li>
+              <li><span>03</span> Journeys in Chapters</li>
             </ul>
           </div>
         </div>
@@ -153,9 +155,25 @@
       const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
       let isScrolling = false;
 
-      // Sections are exactly one <main> tall (100dvh), which on mobile Safari
-      // can differ from window.innerHeight.
-      const currentSection = () => Math.round(mainElement.scrollTop / mainElement.clientHeight);
+      // Sections are at least one <main> tall (100dvh) and grow when their
+      // content needs more (short phones, landscape). The current one is the
+      // last section whose top has reached the top of <main>.
+      const currentSection = () => {
+        const y = mainElement.scrollTop + 2;
+        let idx = 0;
+        sections.forEach((s, i) => { if (s.offsetTop <= y) idx = i; });
+        return idx;
+      };
+      // True while the current section still runs past the edge of the
+      // screen in this direction (1 = down, -1 = up). Native scrolling shows
+      // the rest of it before the one-section jumps take over.
+      const overflowsToward = (dir) => {
+        const s = sections[currentSection()];
+        const top = mainElement.scrollTop;
+        return dir > 0
+          ? s.offsetTop + s.offsetHeight > top + mainElement.clientHeight + 2
+          : s.offsetTop < top - 2;
+      };
 
       indicatorTotal.textContent = String(sections.length).padStart(2, '0');
 
@@ -190,16 +208,22 @@
       const WHEEL_GESTURE_GAP = 200;   // ms
       let lastWheelAt = 0;
       let gestureMoved = false;
+      let gestureNative = false;   // this gesture scrolls inside a tall section
       mainElement.addEventListener('wheel', (event) => {
         const now = performance.now();
-        if (now - lastWheelAt > WHEEL_GESTURE_GAP) gestureMoved = false;
+        if (now - lastWheelAt > WHEEL_GESTURE_GAP) gestureMoved = gestureNative = false;
         lastWheelAt = now;
+        if (gestureNative) return;
         if (isScrolling || gestureMoved) {
           event.preventDefault();
           return;
         }
         const delta = event.deltaY;
         if (Math.abs(delta) < 10) return;
+        if (overflowsToward(Math.sign(delta))) {
+          gestureNative = true;
+          return;
+        }
         const currentIndex = currentSection();
         let targetIndex = currentIndex;
         if (delta > 0) targetIndex = Math.min(sections.length - 1, currentIndex + 1);
@@ -211,6 +235,29 @@
         }
       }, { passive: false });
 
+      // <main> is the scroller, but keys go to the page until something
+      // inside <main> is clicked, so Space / PageDown did nothing on load.
+      const PAGE_KEYS = {
+        PageDown: 1, ArrowDown: 1, ' ': 1,
+        PageUp: -1, ArrowUp: -1,
+        Home: -Infinity, End: Infinity,
+      };
+      document.addEventListener('keydown', (event) => {
+        if (event.altKey || event.ctrlKey || event.metaKey) return;
+        if (!(event.key in PAGE_KEYS)) return;
+        // Space on a link or button activates it.
+        if (event.key === ' ' && event.target.closest('a, button')) return;
+        event.preventDefault();
+        if (isScrolling) return;
+        const step = event.key === ' ' && event.shiftKey ? -1 : PAGE_KEYS[event.key];
+        if (Math.abs(step) === 1 && overflowsToward(step)) {
+          mainElement.scrollBy({ top: step * mainElement.clientHeight * 0.8, behavior: reduceMotion ? 'auto' : 'smooth' });
+          return;
+        }
+        const target = Math.max(0, Math.min(sections.length - 1, currentSection() + step));
+        if (target !== currentSection()) smoothScrollTo(target);
+      });
+
       const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) entry.target.classList.add('is-visible');
@@ -218,6 +265,8 @@
       }, { threshold: 0.25 });
       document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
+      // The section crossing the middle of the screen is the current one
+      // (a ratio threshold never fires for a section over twice as tall).
       const indexObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -230,15 +279,21 @@
             else nav.classList.add('nav-scrolled');
           }
         });
-      }, { threshold: 0.5 });
+      }, { rootMargin: '-50% 0px -50% 0px' });
       sections.forEach((s) => indexObserver.observe(s));
 
       // ===== Touch swipe navigation (mobile) =====
+      // Read where the swipe started: by touchend the finger has already
+      // scrolled <main> part of the way.
       let touchStartY = null;
       let touchStartTime = 0;
+      let touchStartIndex = 0;
+      let touchStartOverflow = { 1: false, '-1': false };
       mainElement.addEventListener('touchstart', (e) => {
         touchStartY = e.touches[0].clientY;
         touchStartTime = Date.now();
+        touchStartIndex = currentSection();
+        touchStartOverflow = { 1: overflowsToward(1), '-1': overflowsToward(-1) };
       }, { passive: true });
       mainElement.addEventListener('touchend', (e) => {
         if (touchStartY === null) return;
@@ -249,11 +304,10 @@
         // Only treat as a swipe (not a scroll) if fast & strong enough
         if (Math.abs(deltaY) < 60 || deltaTime > 600) return;
         if (isScrolling) return;
-        const currentIndex = currentSection();
-        const targetIndex = deltaY > 0
-          ? Math.min(sections.length - 1, currentIndex + 1)
-          : Math.max(0, currentIndex - 1);
-        if (targetIndex !== currentIndex) smoothScrollTo(targetIndex);
+        const dir = deltaY > 0 ? 1 : -1;
+        if (touchStartOverflow[dir]) return;   // still inside a tall section
+        const targetIndex = Math.max(0, Math.min(sections.length - 1, touchStartIndex + dir));
+        if (targetIndex !== touchStartIndex) smoothScrollTo(targetIndex);
       }, { passive: true });
     </script>
   </body>

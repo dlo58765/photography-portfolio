@@ -9,7 +9,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/01.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/5.6 \u00b7 ISO 250 \u00b7 200mm",
+      "title": "Red buildings and a small church below a snowy mountainside"
     },
     {
       "thumb": "thumbs/02.jpg",
@@ -19,7 +21,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/02.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/2 \u00b7 ISO 8000 \u00b7 24mm",
+      "title": "House and mountain blurred through a window at dusk"
     },
     {
       "thumb": "thumbs/03.jpg",
@@ -29,7 +33,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/03.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/80s \u00b7 f/4.5 \u00b7 ISO 100 \u00b7 50mm",
+      "title": "Snow-banked street curving toward a steep peak"
     },
     {
       "thumb": "thumbs/04.jpg",
@@ -39,7 +45,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/04.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/30s \u00b7 f/11 \u00b7 ISO 100 \u00b7 67mm",
+      "title": "Red waterfront buildings beneath a jagged snowy ridge"
     },
     {
       "thumb": "thumbs/05.jpg",
@@ -49,7 +57,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/05.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/100s \u00b7 f/5.6 \u00b7 ISO 800 \u00b7 200mm",
+      "title": "Row of red cabins on the water, snowy range behind"
     },
     {
       "thumb": "thumbs/06.jpg",
@@ -59,7 +69,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/06.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/100s \u00b7 f/4.5 \u00b7 ISO 800 \u00b7 85mm",
+      "title": "Statue of a waving woman atop a harbour beacon"
     },
     {
       "thumb": "thumbs/07.jpg",
@@ -69,7 +81,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/07.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/125s \u00b7 f/8 \u00b7 ISO 100 \u00b7 28mm",
+      "title": "Green water along a snowy shore, peak in mist"
     },
     {
       "thumb": "thumbs/08.jpg",
@@ -79,7 +93,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/08.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/125s \u00b7 f/8 \u00b7 ISO 100 \u00b7 30mm",
+      "title": "Norwegian flag at a boat's stern below snowy peaks"
     },
     {
       "thumb": "thumbs/09.jpg",
@@ -89,7 +105,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/09.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/10 \u00b7 ISO 100 \u00b7 38mm",
+      "title": "Snow-plastered peaks rising from dark water"
     },
     {
       "thumb": "thumbs/10.jpg",
@@ -99,7 +117,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/10.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/5.6 \u00b7 ISO 160 \u00b7 200mm",
+      "title": "Small boat of passengers in bright suits by snowy rocks"
     },
     {
       "thumb": "thumbs/11.jpg",
@@ -109,7 +129,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/11.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/7.1 \u00b7 ISO 100 \u00b7 91mm",
+      "title": "Narrow fjord between steep snowy walls in mist"
     },
     {
       "thumb": "thumbs/12.jpg",
@@ -119,7 +141,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/12.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/400s \u00b7 f/14 \u00b7 ISO 100 \u00b7 55mm",
+      "title": "Backlit water and rocky islets under heavy clouds"
     },
     {
       "thumb": "thumbs/13.jpg",
@@ -129,7 +153,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/13.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/5.6 \u00b7 ISO 400 \u00b7 200mm",
+      "title": "Six birds of prey perched on a mossy rock"
     },
     {
       "thumb": "thumbs/14.jpg",
@@ -139,7 +165,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/14.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/5.6 \u00b7 ISO 250 \u00b7 200mm",
+      "title": "Four raptors on a lichen-covered rock below snowy slopes"
     },
     {
       "thumb": "thumbs/15.jpg",
@@ -149,7 +177,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/15.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/5.6 \u00b7 ISO 200 \u00b7 200mm",
+      "title": "Raptor spreading its wings on a shoreline rock"
     },
     {
       "thumb": "thumbs/16.jpg",
@@ -159,7 +189,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/16.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/5.6 \u00b7 ISO 320 \u00b7 200mm",
+      "title": "Bird of prey landing beside others on a rock"
     },
     {
       "thumb": "thumbs/17.jpg",
@@ -169,7 +201,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/17.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/5.6 \u00b7 ISO 200 \u00b7 200mm",
+      "title": "Bird of prey in flight over grey water"
     },
     {
       "thumb": "thumbs/18.jpg",
@@ -179,7 +213,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/18.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/5 \u00b7 ISO 1000 \u00b7 131mm",
+      "title": "Passengers gazing out from a boat cabin window"
     },
     {
       "thumb": "thumbs/19.jpg",
@@ -189,7 +225,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/19.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/125s \u00b7 f/8 \u00b7 ISO 100 \u00b7 40mm",
+      "title": "Svolv\u00e6r marina below cloud-capped peaks in sunlight"
     },
     {
       "thumb": "thumbs/20.jpg",
@@ -199,7 +237,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/20.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/15s \u00b7 f/2.8 \u00b7 ISO 3200 \u00b7 24mm",
+      "title": "Lamplit street and wooden house at blue hour"
     },
     {
       "thumb": "thumbs/21.jpg",
@@ -209,7 +249,9 @@
       "shape": "wide",
       "full_w": 4574,
       "md": "thumbs/21.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/4405s \u00b7 f/1.8 \u00b7 ISO 100 \u00b7 43mm",
+      "title": "Fjord-side road seen past a car's wing mirror"
     },
     {
       "thumb": "thumbs/22.jpg",
@@ -219,7 +261,9 @@
       "shape": "wide",
       "full_w": 4032,
       "md": "thumbs/22.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/1984s \u00b7 f/1.8 \u00b7 ISO 64 \u00b7 48mm",
+      "title": "Cloud-draped peaks over calm water from a snowy shore"
     },
     {
       "thumb": "thumbs/23.jpg",
@@ -229,7 +273,9 @@
       "shape": "portrait",
       "full_w": 1920,
       "md": "thumbs/23.md.jpg",
-      "md_w": 900
+      "md_w": 900,
+      "shot": "1/915s \u00b7 f/1.8 \u00b7 ISO 100 \u00b7 24mm",
+      "title": "Moored boat's open deck below a snowy peak"
     },
     {
       "thumb": "thumbs/24.jpg",
@@ -239,7 +285,9 @@
       "shape": "wide",
       "full_w": 2560,
       "md": "thumbs/24.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/832s \u00b7 f/1.8 \u00b7 ISO 64 \u00b7 48mm",
+      "title": "Old wooden pier and colourful waterfront below jagged peaks"
     },
     {
       "thumb": "thumbs/25.jpg",
@@ -249,7 +297,9 @@
       "shape": "wide",
       "full_w": 4126,
       "md": "thumbs/25.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/1408s \u00b7 f/1.8 \u00b7 ISO 100 \u00b7 47mm",
+      "title": "Waves breaking on dark rocks, snowy mountains beyond"
     },
     {
       "thumb": "thumbs/26.jpg",
@@ -259,7 +309,9 @@
       "shape": "wide",
       "full_w": 2560,
       "md": "thumbs/26.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/312s \u00b7 f/1.8 \u00b7 ISO 100 \u00b7 24mm",
+      "title": "Passengers on deck photographing snowy fjord walls"
     },
     {
       "thumb": "thumbs/27.jpg",
@@ -269,7 +321,9 @@
       "shape": "wide",
       "full_w": 4032,
       "md": "thumbs/27.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/2110s \u00b7 f/1.8 \u00b7 ISO 64 \u00b7 60mm",
+      "title": "Rocky point jutting into grey water below snowy peaks"
     }
   ]
 }

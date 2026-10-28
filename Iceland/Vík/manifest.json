@@ -9,7 +9,9 @@
       "shape": "wide",
       "full_w": 2560,
       "md": "thumbs/1.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/640s \u00b7 f/5 \u00b7 ISO 160 \u00b7 105mm",
+      "title": "Car driving straight into a low golden sun"
     },
     {
       "thumb": "thumbs/2.jpg",
@@ -19,7 +21,9 @@
       "shape": "wide",
       "full_w": 2560,
       "md": "thumbs/2.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/10 \u00b7 ISO 500 \u00b7 105mm",
+      "title": "Snow-capped peaks in low sun beyond brown moorland"
     },
     {
       "thumb": "thumbs/3.jpg",
@@ -29,7 +33,9 @@
       "shape": "wide",
       "full_w": 2560,
       "md": "thumbs/3.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/99s \u00b7 f/2.8 \u00b7 ISO 32 \u00b7 77mm",
+      "title": "Reynisdrangar sea stacks silhouetted against an orange sky"
     },
     {
       "thumb": "thumbs/4.jpg",
@@ -39,7 +45,9 @@
       "shape": "portrait",
       "full_w": 1920,
       "md": "thumbs/4.md.jpg",
-      "md_w": 900
+      "md_w": 900,
+      "shot": "1/99s \u00b7 f/2.8 \u00b7 ISO 32 \u00b7 77mm",
+      "title": "Pebbled black sand, gentle surf and distant sea stacks"
     },
     {
       "thumb": "thumbs/5.jpg",
@@ -49,7 +57,8 @@
       "shape": "wide",
       "full_w": 2364,
       "md": "thumbs/5.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Tomato spaghetti, soup and garlic bread on a wooden table"
     },
     {
       "thumb": "thumbs/6.jpg",
@@ -59,7 +68,8 @@
       "shape": "portrait",
       "full_w": 1774,
       "md": "thumbs/6.md.jpg",
-      "md_w": 901
+      "md_w": 901,
+      "title": "Presenter guiding molten lava along a stone-lined channel"
     },
     {
       "thumb": "thumbs/7.jpg",
@@ -69,7 +79,8 @@
       "shape": "portrait",
       "full_w": 1774,
       "md": "thumbs/7.md.jpg",
-      "md_w": 901
+      "md_w": 901,
+      "title": "Empty lava channel and screens before an indoor show"
     },
     {
       "thumb": "thumbs/10.jpg",
@@ -79,7 +90,8 @@
       "shape": "wide",
       "full_w": 1600,
       "md": "thumbs/10.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Green and violet aurora over dark hills and lit buildings"
     },
     {
       "thumb": "thumbs/img_1204.jpg",
@@ -89,7 +101,9 @@
       "shape": "wide",
       "full_w": 4032,
       "md": "thumbs/img_1204.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1s \u00b7 f/1.8 \u00b7 ISO 12500 \u00b7 24mm",
+      "title": "Green aurora rising above parked cars and a dark ridge"
     },
     {
       "thumb": "thumbs/s__458924036_0.jpg",
@@ -99,7 +113,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/s__458924036_0.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Wire fence and tall grass below starlit snowy peaks"
     },
     {
       "thumb": "thumbs/s__458924037_0.jpg",
@@ -109,7 +124,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/s__458924037_0.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Faint aurora glow over dark hills on a starry night"
     },
     {
       "thumb": "thumbs/s__458924056_0.jpg",
@@ -119,7 +135,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/s__458924056_0.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Hooded figure on a grassy slope watching green aurora"
     },
     {
       "thumb": "thumbs/s__458924057_0.jpg",
@@ -129,7 +146,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/s__458924057_0.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Pale green and violet aurora above snow-capped ridges"
     },
     {
       "thumb": "thumbs/s__458924059_0.jpg",
@@ -139,7 +157,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/s__458924059_0.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Bright green aurora band sweeping above a cluster of lights"
     },
     {
       "thumb": "thumbs/s__458924060_0.jpg",
@@ -149,7 +168,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/s__458924060_0.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Starry sky and low aurora over a valley with lights"
     }
   ]
 }

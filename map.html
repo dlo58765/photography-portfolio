@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Map · RexChen Photography</title>
     <meta name="description" content="Where each frame was made — the stops of RexChen's Norway and Iceland chapters on a map." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Map · RexChen Photography" />
+    <meta property="og:description" content="Where each frame was made — the stops of RexChen's Norway and Iceland chapters on a map." />
+    <meta property="og:image" content="https://dlo58765.github.io/photography-portfolio/Top.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#0a0a0c" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230a0a0c'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' font-style='italic' fill='%23c8a96b' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <!-- Visitor stats: GoatCounter (no cookies; skips localhost) -->
+    <script data-goatcounter="https://dlo58765.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
     <style>
         :root {
             --text: #f5f4ef;
@@ -183,7 +190,7 @@
 <body>
     <div class="container">
         <div id="map"></div>
-        <div class="map-tip"><strong>Tip:</strong> click a marker to open its chapter.</div>
+        <div class="map-tip"><strong>Tip:</strong> tap or click a marker to open its chapter.</div>
     </div>
 
     <script src="locations-data.js"></script>
@@ -279,6 +286,12 @@
                 });
 
                 marker.on('click', () => {
+                    // 統計哪些站點被點（GoatCounter 事件；用 sendBeacon 送出，換頁也不會遺失）
+                    window.goatcounter?.count?.({
+                        path: `map/${series}/${key}`,
+                        title: `${cfg.label} · ${location.name}`,
+                        event: true
+                    });
                     window.location.href = `${cfg.targetHtml}#stop-${location.number}`;
                 });
 

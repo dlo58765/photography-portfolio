@@ -9,7 +9,8 @@
       "shape": "wide",
       "full_w": 2364,
       "md": "thumbs/1.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Kirkjufellsfoss with Kirkjufell rising behind under grey cloud"
     },
     {
       "thumb": "thumbs/2.jpg",
@@ -19,7 +20,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/2.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/6.3 \u00b7 ISO 400 \u00b7 93mm",
+      "title": "Footbridge over the falls, a photographer on the bank below"
     },
     {
       "thumb": "thumbs/3.jpg",
@@ -29,7 +32,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/3.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/6.3 \u00b7 ISO 400 \u00b7 24mm",
+      "title": "Stepped cascades below a terraced green mountainside"
     },
     {
       "thumb": "thumbs/4.jpg",
@@ -39,7 +44,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/4.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/500s \u00b7 f/6.3 \u00b7 ISO 400 \u00b7 345mm",
+      "title": "Lone hiker looking over mossy lava and water"
     },
     {
       "thumb": "thumbs/5.jpg",
@@ -49,7 +56,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/5.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/500s \u00b7 f/1.8 \u00b7 ISO 50 \u00b7 24mm",
+      "title": "Looking toward the cone-shaped peak from above the falls"
     },
     {
       "thumb": "thumbs/6.jpg",
@@ -59,7 +68,9 @@
       "shape": "portrait",
       "full_w": 1920,
       "md": "thumbs/6.md.jpg",
-      "md_w": 900
+      "md_w": 900,
+      "shot": "1/1456s \u00b7 f/1.8 \u00b7 ISO 80 \u00b7 24mm",
+      "title": "Stream falling through rocks beneath the symmetrical peak"
     },
     {
       "thumb": "thumbs/7.jpg",
@@ -69,7 +80,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/7.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "0.6s \u00b7 f/1.4 \u00b7 ISO 50 \u00b7 24mm",
+      "title": "Low green plants on grey rock, autumn moor beyond"
     },
     {
       "thumb": "thumbs/8.jpg",
@@ -79,7 +92,9 @@
       "shape": "portrait",
       "full_w": 1920,
       "md": "thumbs/8.md.jpg",
-      "md_w": 900
+      "md_w": 900,
+      "shot": "1/197s \u00b7 f/2.8 \u00b7 ISO 25 \u00b7 77mm",
+      "title": "Chestnut horse grazing on golden autumn grass"
     },
     {
       "thumb": "thumbs/9.jpg",
@@ -89,7 +104,9 @@
       "shape": "portrait",
       "full_w": 3024,
       "md": "thumbs/9.md.jpg",
-      "md_w": 900
+      "md_w": 900,
+      "shot": "1/854s \u00b7 f/1.8 \u00b7 ISO 64 \u00b7 48mm",
+      "title": "Camera on a tripod framing Kirkjufell on its screen"
     },
     {
       "thumb": "thumbs/10.jpg",
@@ -99,7 +116,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/10.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/500s \u00b7 f/6.3 \u00b7 ISO 400 \u00b7 296mm",
+      "title": "Photographer climbing through red autumn heath above a lake"
     }
   ]
 }

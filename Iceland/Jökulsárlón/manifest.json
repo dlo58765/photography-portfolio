@@ -9,7 +9,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/1.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Inflatable boat threading between icebergs below the glacier"
     },
     {
       "thumb": "thumbs/2.jpg",
@@ -19,7 +20,9 @@
       "shape": "wide",
       "full_w": 2560,
       "md": "thumbs/2.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/6.3 \u00b7 ISO 320 \u00b7 61mm",
+      "title": "Ice shards on Diamond Beach as surf foams behind"
     },
     {
       "thumb": "thumbs/3.jpg",
@@ -29,7 +32,9 @@
       "shape": "wide",
       "full_w": 2560,
       "md": "thumbs/3.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/6.3 \u00b7 ISO 320 \u00b7 63mm",
+      "title": "Waves breaking beyond ice chunks on wet black sand"
     },
     {
       "thumb": "thumbs/4.jpg",
@@ -39,7 +44,9 @@
       "shape": "portrait",
       "full_w": 1707,
       "md": "thumbs/4.md.jpg",
-      "md_w": 800
+      "md_w": 800,
+      "shot": "1/100s \u00b7 f/6.3 \u00b7 ISO 80 \u00b7 142mm",
+      "title": "Upright ice fin in a wash of sea foam"
     },
     {
       "thumb": "thumbs/5.jpg",
@@ -49,7 +56,8 @@
       "shape": "portrait",
       "full_w": 1672,
       "md": "thumbs/5.md.jpg",
-      "md_w": 800
+      "md_w": 800,
+      "title": "Twisted clear ice shape standing on black sand"
     },
     {
       "thumb": "thumbs/6.jpg",
@@ -59,7 +67,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/6.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Crouching photographer framing floating ice from the shore"
     },
     {
       "thumb": "thumbs/7.jpg",
@@ -69,7 +78,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/7.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Ash-streaked blue icebergs before the white ice cap"
     },
     {
       "thumb": "thumbs/8.jpg",
@@ -79,7 +89,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/8.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Icebergs drifting below snow-covered ice cap and dark hills"
     },
     {
       "thumb": "thumbs/9.jpg",
@@ -89,7 +100,8 @@
       "shape": "portrait",
       "full_w": 1672,
       "md": "thumbs/9.md.jpg",
-      "md_w": 800
+      "md_w": 800,
+      "title": "Heap of crushed ice glinting in bright sun"
     },
     {
       "thumb": "thumbs/10.jpg",
@@ -99,7 +111,8 @@
       "shape": "portrait",
       "full_w": 1672,
       "md": "thumbs/10.md.jpg",
-      "md_w": 800
+      "md_w": 800,
+      "title": "Backlit icebergs on shimmering water in low sun"
     },
     {
       "thumb": "thumbs/11.jpg",
@@ -109,7 +122,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/11.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Boat driver in orange steering through brash ice"
     },
     {
       "thumb": "thumbs/12.jpg",
@@ -119,7 +133,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/12.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Two-person inflatable speeding past a sculpted iceberg"
     },
     {
       "thumb": "thumbs/13.jpg",
@@ -129,7 +144,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/13.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Icebergs crowding the glacier front in fading light"
     },
     {
       "thumb": "thumbs/14.jpg",
@@ -139,7 +155,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/14.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Icebergs under a clear blue sky, ice cap beyond"
     },
     {
       "thumb": "thumbs/15.jpg",
@@ -149,7 +166,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/15.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Crevassed glacier tongue meeting an iceberg-filled lagoon"
     },
     {
       "thumb": "thumbs/16.jpg",
@@ -159,7 +177,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/16.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Snow-dusted crags above a frosted moss plain"
     },
     {
       "thumb": "thumbs/17.jpg",
@@ -169,7 +188,9 @@
       "shape": "wide",
       "full_w": 2560,
       "md": "thumbs/17.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/400s \u00b7 f/6.3 \u00b7 ISO 1250 \u00b7 245mm",
+      "title": "Crevassed glacier ice in flat grey light"
     },
     {
       "thumb": "thumbs/18.jpg",
@@ -179,7 +200,9 @@
       "shape": "wide",
       "full_w": 2560,
       "md": "thumbs/18.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/1000s \u00b7 f/5 \u00b7 ISO 160 \u00b7 97mm",
+      "title": "Dark rock spires rising from fresh snow"
     },
     {
       "thumb": "thumbs/19.jpg",
@@ -189,7 +212,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/19.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Glacier tongue spilling between dark hills under grey cloud"
     },
     {
       "thumb": "thumbs/20.jpg",
@@ -199,7 +223,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/20.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Visitors lining the lagoon shore below the glacier"
     },
     {
       "thumb": "thumbs/21.jpg",
@@ -209,7 +234,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/21.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Distant glacier and peak across calm water in late light"
     },
     {
       "thumb": "thumbs/22.jpg",
@@ -219,7 +245,9 @@
       "shape": "wide",
       "full_w": 2560,
       "md": "thumbs/22.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/1250s \u00b7 f/5.6 \u00b7 ISO 500 \u00b7 24mm",
+      "title": "Roped hikers crossing dark ground toward snowy peaks"
     },
     {
       "thumb": "thumbs/23.jpg",
@@ -229,7 +257,9 @@
       "shape": "portrait",
       "full_w": 1707,
       "md": "thumbs/23.md.jpg",
-      "md_w": 800
+      "md_w": 800,
+      "shot": "1/1000s \u00b7 f/5 \u00b7 ISO 160 \u00b7 34mm",
+      "title": "Seated figure in green watching icebergs below the glacier"
     },
     {
       "thumb": "thumbs/24.jpg",
@@ -239,7 +269,8 @@
       "shape": "portrait",
       "full_w": 1774,
       "md": "thumbs/24.md.jpg",
-      "md_w": 901
+      "md_w": 901,
+      "title": "Packed ham and cheese sandwich by the icy shore"
     },
     {
       "thumb": "thumbs/25.jpg",
@@ -249,7 +280,8 @@
       "shape": "portrait",
       "full_w": 1774,
       "md": "thumbs/25.md.jpg",
-      "md_w": 901
+      "md_w": 901,
+      "title": "Meltwater falling through the roof of an ice cave"
     },
     {
       "thumb": "thumbs/26.jpg",
@@ -259,7 +291,8 @@
       "shape": "portrait",
       "full_w": 1774,
       "md": "thumbs/26.md.jpg",
-      "md_w": 901
+      "md_w": 901,
+      "title": "Painting of icebergs and red peaks on a white wall"
     },
     {
       "thumb": "thumbs/27.jpg",
@@ -269,7 +302,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/27.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Dark hotel block with a few lit windows at dusk"
     },
     {
       "thumb": "thumbs/28.jpg",
@@ -279,7 +313,8 @@
       "shape": "wide",
       "full_w": 2730,
       "md": "thumbs/28.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Black hotel buildings below a snow-dusted hillside"
     },
     {
       "thumb": "thumbs/29.jpg",
@@ -289,7 +324,8 @@
       "shape": "wide",
       "full_w": 2730,
       "md": "thumbs/29.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Two kayakers paddling toward an ash-streaked glacier"
     },
     {
       "thumb": "thumbs/30.jpg",
@@ -299,7 +335,8 @@
       "shape": "wide",
       "full_w": 2730,
       "md": "thumbs/30.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Kayak group in red boats on a grey glacier lake"
     },
     {
       "thumb": "thumbs/31.jpg",
@@ -309,7 +346,8 @@
       "shape": "wide",
       "full_w": 2730,
       "md": "thumbs/31.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Ash-darkened icebergs in still water as snow falls"
     },
     {
       "thumb": "thumbs/32.jpg",
@@ -319,7 +357,8 @@
       "shape": "wide",
       "full_w": 2364,
       "md": "thumbs/32.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Paddlers in drysuits walking across stones toward the glacier"
     },
     {
       "thumb": "thumbs/33.jpg",
@@ -329,7 +368,8 @@
       "shape": "portrait",
       "full_w": 1536,
       "md": "thumbs/33.md.jpg",
-      "md_w": 675
+      "md_w": 675,
+      "title": "Kayaker's view over a red bow toward floating ice"
     },
     {
       "thumb": "thumbs/s__458948617_0.jpg",
@@ -339,7 +379,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/s__458948617_0.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Cars crossing a suspension bridge, icebergs and ice cap behind"
     }
   ]
 }

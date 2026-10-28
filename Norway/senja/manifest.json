@@ -1,12 +1,5 @@
 {
-  "cover": {
-    "thumb": "thumbs/cover.jpg",
-    "full": "cover.jpg",
-    "w": 1616,
-    "h": 1080,
-    "shape": "wide",
-    "full_w": 1616
-  },
+  "cover": null,
   "frames": [
     {
       "thumb": "thumbs/01.jpg",
@@ -16,7 +9,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/01.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/4 \u00b7 ISO 500 \u00b7 38mm",
+      "title": "Snow-laden rooftops below jagged peaks at dusk"
     },
     {
       "thumb": "thumbs/02.jpg",
@@ -26,7 +21,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/02.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/25s \u00b7 f/2.8 \u00b7 ISO 12800 \u00b7 28mm",
+      "title": "Silhouette at a window, snowy peaks outside at blue hour"
     },
     {
       "thumb": "thumbs/03.jpg",
@@ -36,7 +33,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/03.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/4s \u00b7 f/2.8 \u00b7 ISO 8000 \u00b7 28mm",
+      "title": "Village lights reflected in the fjord at night"
     },
     {
       "thumb": "thumbs/04.jpg",
@@ -46,7 +45,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/04.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/5 \u00b7 ISO 50 \u00b7 44mm",
+      "title": "Red snow pole and boulders facing a steep mountain wall"
     },
     {
       "thumb": "thumbs/05.jpg",
@@ -56,7 +57,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/05.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/5 \u00b7 ISO 50 \u00b7 38mm",
+      "title": "Icy village road leading to snowy peaks in hazy sun"
     },
     {
       "thumb": "thumbs/06.jpg",
@@ -66,7 +69,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/06.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/10 \u00b7 ISO 100 \u00b7 45mm",
+      "title": "Village along a deep-blue fjord beneath snowy peaks"
     },
     {
       "thumb": "thumbs/07.jpg",
@@ -76,7 +81,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/07.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/200s \u00b7 f/10 \u00b7 ISO 100 \u00b7 33mm",
+      "title": "Segla's sheer rock fin against a blue sky"
     },
     {
       "thumb": "thumbs/10.jpg",
@@ -86,7 +93,9 @@
       "shape": "wide",
       "full_w": 4032,
       "md": "thumbs/10.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/5s \u00b7 f/1.8 \u00b7 ISO 2000 \u00b7 24mm",
+      "title": "Snowy seawall path into a lit village at blue hour"
     },
     {
       "thumb": "thumbs/11.jpg",
@@ -96,7 +105,9 @@
       "shape": "wide",
       "full_w": 4032,
       "md": "thumbs/11.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/2s \u00b7 f/1.8 \u00b7 ISO 1250 \u00b7 24mm",
+      "title": "Snowy shore facing a lit village and pointed peak"
     }
   ]
 }

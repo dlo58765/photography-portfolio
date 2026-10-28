@@ -39,9 +39,13 @@
   const cursorRing = document.querySelector('.cursor-ring');
   if (!cursorDot || !cursorRing || !matchMedia('(hover: hover) and (pointer: fine)').matches) return;
 
-  let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
-  let ringX = mouseX, ringY = mouseY;
+  // Hidden until the first mousemove; otherwise the dot sits in the top-left
+  // corner and the ring in the middle of the hero text.
+  let mouseX = 0, mouseY = 0;
+  let ringX = 0, ringY = 0;
   let ringMoving = false;
+  let seen = false;
+  cursorDot.style.visibility = cursorRing.style.visibility = 'hidden';
   function animateRing() {
     ringX += (mouseX - ringX) * 0.15;
     ringY += (mouseY - ringY) * 0.15;
@@ -58,9 +62,14 @@
   document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX; mouseY = e.clientY;
     cursorDot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+    if (!seen) {
+      // Start the ring on the pointer instead of flying in from the corner.
+      seen = true;
+      ringX = mouseX; ringY = mouseY;
+      cursorDot.style.visibility = cursorRing.style.visibility = '';
+    }
     startRing();
   });
-  startRing();
 
   // Delegated, so the tiles gallery.js builds later get hover states too.
   document.addEventListener('mouseover', (e) => {

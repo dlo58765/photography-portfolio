@@ -9,7 +9,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/0.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Statue before a stepped concrete church under grey cloud"
     },
     {
       "thumb": "thumbs/1.jpg",
@@ -19,7 +20,9 @@
       "shape": "wide",
       "full_w": 2560,
       "md": "thumbs/1.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/588s \u00b7 f/1.8 \u00b7 ISO 80 \u00b7 24mm",
+      "title": "Looking out over swans on a still city pond"
     },
     {
       "thumb": "thumbs/2.jpg",
@@ -29,7 +32,9 @@
       "shape": "portrait",
       "full_w": 2268,
       "md": "thumbs/2.md.jpg",
-      "md_w": 675
+      "md_w": 675,
+      "shot": "1/99s \u00b7 f/2.8 \u00b7 ISO 50 \u00b7 77mm",
+      "title": "Green-spired white church above a pond full of swans"
     },
     {
       "thumb": "thumbs/3.jpg",
@@ -39,7 +44,8 @@
       "shape": "portrait",
       "full_w": 1774,
       "md": "thumbs/3.md.jpg",
-      "md_w": 901
+      "md_w": 901,
+      "title": "Hallgr\u00edmskirkja's stepped tower above a rain-wet plaza"
     },
     {
       "thumb": "thumbs/4.jpg",
@@ -49,7 +55,8 @@
       "shape": "wide",
       "full_w": 2364,
       "md": "thumbs/4.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Pews and pipe organ in a pale concrete nave"
     },
     {
       "thumb": "thumbs/5.jpg",
@@ -59,7 +66,8 @@
       "shape": "portrait",
       "full_w": 1774,
       "md": "thumbs/5.md.jpg",
-      "md_w": 901
+      "md_w": 901,
+      "title": "Light streaming across the church's vaulted nave"
     },
     {
       "thumb": "thumbs/6.jpg",
@@ -69,7 +77,8 @@
       "shape": "wide",
       "full_w": 2730,
       "md": "thumbs/6.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Swans gliding across the pond beneath streaked cloud"
     },
     {
       "thumb": "thumbs/7.jpg",
@@ -79,7 +88,8 @@
       "shape": "wide",
       "full_w": 2730,
       "md": "thumbs/7.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Rainbow-painted street leading to Hallgr\u00edmskirkja"
     },
     {
       "thumb": "thumbs/8.jpg",
@@ -89,7 +99,8 @@
       "shape": "portrait",
       "full_w": 1774,
       "md": "thumbs/8.md.jpg",
-      "md_w": 901
+      "md_w": 901,
+      "title": "Handful of white mud over a misty blue lagoon"
     },
     {
       "thumb": "thumbs/9.jpg",
@@ -99,7 +110,8 @@
       "shape": "portrait",
       "full_w": 1774,
       "md": "thumbs/9.md.jpg",
-      "md_w": 901
+      "md_w": 901,
+      "title": "Blue drink raised over a misty geothermal lagoon"
     },
     {
       "thumb": "thumbs/10.jpg",
@@ -109,7 +121,8 @@
       "shape": "wide",
       "full_w": 2364,
       "md": "thumbs/10.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Bathers by a lit waterfall wall at dusk"
     },
     {
       "thumb": "thumbs/11.jpg",
@@ -119,7 +132,8 @@
       "shape": "portrait",
       "full_w": 1774,
       "md": "thumbs/11.md.jpg",
-      "md_w": 901
+      "md_w": 901,
+      "title": "Two-scoop ice cream cone outside a turquoise parlour"
     },
     {
       "thumb": "thumbs/12.jpg",
@@ -129,7 +143,8 @@
       "shape": "portrait",
       "full_w": 1773,
       "md": "thumbs/12.md.jpg",
-      "md_w": 900
+      "md_w": 900,
+      "title": "Sun Voyager plaque with the steel ship sculpture behind"
     },
     {
       "thumb": "thumbs/13.jpg",
@@ -139,7 +154,9 @@
       "shape": "portrait",
       "full_w": 1920,
       "md": "thumbs/13.md.jpg",
-      "md_w": 900
+      "md_w": 900,
+      "shot": "1/60s \u00b7 f/1.8 \u00b7 ISO 800 \u00b7 24mm",
+      "title": "Airport sign reading 'Exit to Iceland'"
     }
   ]
 }

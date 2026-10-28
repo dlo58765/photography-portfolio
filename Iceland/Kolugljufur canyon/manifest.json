@@ -9,7 +9,9 @@
       "shape": "wide",
       "full_w": 2560,
       "md": "thumbs/1.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "5s \u00b7 f/14 \u00b7 ISO 50 \u00b7 24mm",
+      "title": "Kolufossar, a chain of falls between dark rock ledges"
     },
     {
       "thumb": "thumbs/2.jpg",
@@ -19,7 +21,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/2.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "5s \u00b7 f/14 \u00b7 ISO 50 \u00b7 24mm",
+      "title": "Backlit cascades pouring into the gorge under broken cloud"
     },
     {
       "thumb": "thumbs/3.jpg",
@@ -29,7 +33,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/3.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "4s \u00b7 f/16 \u00b7 ISO 50 \u00b7 24mm",
+      "title": "Row of falls smoothed by long exposure, pale sky"
     },
     {
       "thumb": "thumbs/4.jpg",
@@ -39,7 +45,8 @@
       "shape": "square",
       "full_w": 1875,
       "md": "thumbs/4.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Hiker in yellow resting on the canyon rim"
     },
     {
       "thumb": "thumbs/5.jpg",
@@ -49,7 +56,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/5.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/125s \u00b7 f/6.3 \u00b7 ISO 125 \u00b7 18mm",
+      "title": "Hiker on the rim, a viewing platform above"
     },
     {
       "thumb": "thumbs/6.jpg",
@@ -59,7 +68,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/6.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/5.6 \u00b7 ISO 64 \u00b7 57mm",
+      "title": "Twin-arched sea stack in calm blue water"
     },
     {
       "thumb": "thumbs/8.jpg",
@@ -69,7 +80,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/8.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/160s \u00b7 f/6.3 \u00b7 ISO 64 \u00b7 227mm",
+      "title": "Hooded walker in sunlit golden grass above the water"
     },
     {
       "thumb": "thumbs/9.jpg",
@@ -79,7 +92,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/9.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/5.6 \u00b7 ISO 64 \u00b7 58mm",
+      "title": "Golden grass slopes and black sand flats below snowy peaks"
     },
     {
       "thumb": "thumbs/10.jpg",
@@ -89,7 +104,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/10.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Lone walker on a grassy path beside the water"
     }
   ]
 }

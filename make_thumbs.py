@@ -16,6 +16,12 @@ For every image found in each chapter folder:
     so the lightbox needs a JPEG copy.
   - JPG/PNG originals are used as-is for the lightbox (their real file
     path is stored in the manifest).
+  - reads shutter / aperture / ISO / focal length from the original's EXIF
+    for the lightbox (left out when the photo has no EXIF).
+
+Optional <chapter>/captions.json maps photo file names to a short title,
+e.g. {"DSC06866.JPG": "Harbour at dusk"}. The title is the lightbox
+caption and the image's alt text; photos without one show "Frame NN".
 
 Then writes each chapter's manifest.json and injects a combined
 window.<VAR>_MANIFESTS object into each HTML target between
@@ -150,6 +156,52 @@ def header_width(path: Path) -> int:
         return 0
 
 
+def shot_info(path: Path) -> str:
+    """'1/250s · f/8 · ISO 100 · 35mm' from EXIF; '' if the photo has none.
+    Focal length is the 35mm equivalent when the camera records it (phones
+    store a ~7mm actual focal length otherwise)."""
+    try:
+        with Image.open(path) as im:
+            exif = im.getexif().get_ifd(0x8769)   # Exif sub-IFD
+    except Exception:
+        return ""
+    parts = []
+    t = exif.get(0x829A)                          # ExposureTime
+    if t and float(t) > 0:
+        t = float(t)
+        n = 1 / t
+        if t < 1 and abs(n - round(n)) < 0.05:
+            parts.append(f"1/{round(n)}s")
+        else:
+            parts.append(f"{t:.1f}".rstrip("0").rstrip(".") + "s")
+    f = exif.get(0x829D)                          # FNumber
+    if f and float(f) > 0:
+        parts.append(f"f/{round(float(f), 1):g}")
+    iso = exif.get(0x8827)                        # ISOSpeedRatings
+    if isinstance(iso, tuple):
+        iso = iso[0] if iso else None
+    if iso:
+        parts.append(f"ISO {iso}")
+    mm = exif.get(0xA405) or exif.get(0x920A)     # 35mm equivalent, else actual
+    if mm and float(mm) > 0:
+        parts.append(f"{round(float(mm))}mm")
+    return " · ".join(parts)
+
+
+def load_captions(folder: Path) -> dict[str, str]:
+    """<folder>/captions.json as {lowercased file name: title}; {} if absent."""
+    path = folder / "captions.json"
+    if not path.is_file():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as e:
+        print(f"  [captions] {path}: {e}")
+        return {}
+    return {name.lower(): title.strip() for name, title in data.items()
+            if isinstance(title, str) and title.strip()}
+
+
 def is_heavy(src: Path) -> bool:
     """True if the lightbox should get a .lg.jpg instead of the original."""
     return (src.suffix.lower() not in HEIC_EXTS
@@ -246,6 +298,9 @@ def process_image(src: Path, thumb_dir: Path, is_cover: bool
     if not is_cover:
         entry["md"] = f"thumbs/{stem_lower}.md.jpg"
         entry["md_w"] = header_width(thumb_dir / f"{stem_lower}.md.jpg")
+        shot = shot_info(src)
+        if shot:
+            entry["shot"] = shot
     return wrote, entry
 
 
@@ -296,6 +351,9 @@ def process_folder(folder: Path, label: str) -> tuple[int, int, dict | None]:
     srcs = sorted({p for p in folder.iterdir()
                    if p.is_file() and p.suffix.lower() in ALL_EXTS},
                   key=natural_key)
+    captions = load_captions(folder)
+    for name in sorted(set(captions) - {s.name.lower() for s in srcs}):
+        print(f"  [captions] {label}: no photo named {name}")
     for src in srcs:
         is_cover = src.stem.lower() == "cover"
         result = process_image(src, thumb_dir, is_cover)
@@ -310,6 +368,9 @@ def process_folder(folder: Path, label: str) -> tuple[int, int, dict | None]:
         if is_cover:
             cover_entry = entry
         else:
+            title = captions.get(src.name.lower())
+            if title:
+                entry["title"] = title
             frames.append(entry)
 
     prune_stale_thumbs(thumb_dir, srcs)
@@ -376,7 +437,9 @@ def inject_into_html(html_path: Path, var_name: str, data: dict) -> None:
     if not pattern.search(text):
         print(f"[inline] {html_path.name}: no MANIFEST markers found — skipped")
         return
-    new_text = pattern.sub(payload, text)
+    # A function, so backslashes in the JSON (escaped quotes in a caption)
+    # are not read as regex escapes.
+    new_text = pattern.sub(lambda _: payload, text)
     if new_text != text:
         html_path.write_text(new_text, encoding="utf-8")
         print(f"[inline] {html_path.name}: refreshed {var_name} "

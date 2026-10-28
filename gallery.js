@@ -50,7 +50,13 @@
   const lbClose = lightbox.querySelector('.lightbox-close');
   const lbPrev = lightbox.querySelector('.lightbox-prev');
   const lbNext = lightbox.querySelector('.lightbox-next');
-  const chapterFrames = {};   // slug -> [{ src, srcset, alt, caption }, ...]
+  // Caption: the photo's title, then "City · 5 / 14", then the exposure.
+  lightboxCap.innerHTML =
+    '<span class="lightbox-title"></span>' +
+    '<span class="lightbox-meta"></span>' +
+    '<span class="lightbox-shot"></span>';
+  const [lbTitle, lbMeta, lbShot] = lightboxCap.children;
+  const chapterFrames = {};   // slug -> [{ src, srcset, alt, id, title, city, shot }, ...]
   const lbState = { slug: null, index: 0, opener: null };
 
   function loadInto(img, frame) {
@@ -68,7 +74,10 @@
     const frame = frames[i];
     loadInto(lightboxImg, frame);
     lightboxImg.alt = frame.alt;
-    lightboxCap.textContent = `${frame.caption} · ${i + 1} / ${n}`;
+    lbTitle.textContent = frame.title;
+    lbMeta.textContent = `${frame.city} · ${i + 1} / ${n}`;
+    lbShot.textContent = frame.shot;
+    lbShot.hidden = !frame.shot;
     lbState.slug = slug;
     lbState.index = i;
     // Hide arrows if the chapter has only one frame.
@@ -81,6 +90,10 @@
   function openLightbox(slug, index) {
     lbState.opener = document.activeElement;
     showFrame(slug, index);
+    // Which photos people open: a GoatCounter event per open (not per
+    // prev/next). Absent locally and when the script is blocked.
+    const frame = chapterFrames[slug][lbState.index];
+    window.goatcounter?.count?.({ path: `photo/${FOLDER}/${slug}/${frame.id}`, title: frame.title, event: true });
     lightbox.classList.add('is-open');
     document.documentElement.classList.add('lightbox-open');
     lbClose.focus({ preventScroll: true });
@@ -188,6 +201,9 @@
     const thumbSrc = `${base}/${rel.thumb}`;
     const fullSrc = `${base}/${rel.full}`;
     const label = String(frameNum).padStart(2, '0');
+    // `title` comes from the chapter's captions.json; untitled frames
+    // fall back to their number.
+    const alt = rel.title || `${chapter.city} frame ${label}`;
     // Register this frame in the chapter's array so the lightbox
     // knows how to page prev/next.
     const list = chapterFrames[chapter.slug] || (chapterFrames[chapter.slug] = []);
@@ -195,8 +211,12 @@
     list.push({
       src: fullSrc,
       srcset: srcsetOf(base, [[rel.md, rel.md_w], [rel.thumb, rel.w], [rel.full, rel.full_w]]),
-      alt: `${chapter.city} frame ${label}`,
-      caption: `${chapter.city} · Frame ${label}`,
+      alt,
+      // File stem: stays the same when photos are added and frames renumber.
+      id: rel.thumb.split('/').pop().replace(/\.jpg$/i, ''),
+      title: rel.title || `Frame ${label}`,
+      city: chapter.city,
+      shot: rel.shot || '',
     });
 
     const cell = document.createElement('a');
@@ -207,7 +227,7 @@
     const img = document.createElement('img');
     img.loading = 'lazy';
     img.decoding = 'async';
-    img.alt = `${chapter.city} frame ${label}`;
+    img.alt = alt;
     img.onerror = () => {
       // if the thumb is missing, fall back to the original; if that also fails, drop the tile
       if (!img.dataset.fallback) {
@@ -264,13 +284,14 @@
     const chapters = Array.from(document.querySelectorAll('.chapter'));
     if (!rail || !chapters.length) return;
 
-    // Show the rail once the intro has scrolled past.
+    // Show the rail once the intro has scrolled past the top. (An
+    // IntersectionObserver can't tell "still below, on the hero" from
+    // "already above", and a jump straight past the intro never fires it.)
     if (intro) {
-      new IntersectionObserver((entries) => {
-        entries.forEach((e) => {
-          rail.classList.toggle('is-visible', !e.isIntersecting);
-        });
-      }, { rootMargin: '0px 0px -60% 0px' }).observe(intro);
+      const update = () =>
+        rail.classList.toggle('is-visible', intro.getBoundingClientRect().bottom < 0);
+      window.addEventListener('scroll', update, { passive: true });
+      update();
     } else {
       rail.classList.add('is-visible');
     }
@@ -320,7 +341,8 @@
     chaptersEl.appendChild(section);
 
     frames.forEach((entry, i) => {
-      // Manifest schema: entry = { thumb, md, full, w, md_w, full_w, shape },
+      // Manifest schema: entry = { thumb, md, full, w, md_w, full_w, shape,
+      // title?, shot? },
       // paths relative to the chapter folder. (Older builds used a bare
       // filename string — fall back to that for compatibility.)
       const rel = (typeof entry === 'string')

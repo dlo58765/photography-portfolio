@@ -128,12 +128,12 @@ main { scrollbar-width: none; }
 
 a { color: inherit; text-decoration: none; }
 
+/* One screen each, but allowed to grow: a fixed height clipped the content
+ * on short phones and in landscape. */
 .snap-section {
   scroll-snap-align: start;
   min-height: 100vh;
-  height: 100vh;
   min-height: 100dvh;
-  height: 100dvh;
   position: relative;
   overflow: hidden;
 }
@@ -515,7 +515,8 @@ html.gallery-page main {
   color: var(--muted-strong);
   letter-spacing: 0.06em;
 }
-.gallery-meta div span {
+/* The label only; the value beside it (e.g. #frame-count) is a span too. */
+.gallery-meta div > span:first-child {
   display: block;
   font-size: 0.62rem;
   letter-spacing: 0.32em;
@@ -1011,15 +1012,19 @@ html.gallery-page body::before {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   display: none;
+  flex-direction: column;     /* image, then its caption underneath */
   align-items: center;
   justify-content: center;
+  gap: 18px;
   padding: 40px;
   cursor: zoom-out;
 }
 .lightbox.is-open { display: flex; }
 .lightbox img {
   max-width: 92vw;
-  max-height: 88vh;
+  /* Room below for the caption's three lines. */
+  max-height: calc(100vh - 190px);
+  max-height: calc(100dvh - 190px);
   object-fit: contain;
   box-shadow: 0 30px 80px rgba(0,0,0,0.6);
   animation: lb-in 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -1028,10 +1033,11 @@ html.gallery-page body::before {
   from { opacity: 0; transform: scale(0.96); }
   to   { opacity: 1; transform: scale(1); }
 }
+/* Top right, clear of the caption under the image. */
 .lightbox-close {
   position: absolute;
-  bottom: 28px;
-  left: 32px;
+  top: 28px;
+  right: 32px;
   padding: 0;
   border: 0;
   background: transparent;
@@ -1071,18 +1077,33 @@ html.gallery-page body::before {
 .lightbox-next:hover { transform: translateY(-50%) translateX(4px); }
 .lightbox-nav.is-hidden { display: none; }
 .lightbox-caption {
-  position: absolute;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: max-content;
-  max-width: calc(100vw - 48px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  max-width: min(720px, calc(100vw - 48px));
   text-align: center;
-  font-size: 0.72rem;
+}
+.lightbox-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  color: var(--text);
+}
+.lightbox-meta {
+  font-size: 0.68rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--muted-strong);
+  color: var(--accent);
 }
+.lightbox-shot {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.lightbox-shot[hidden] { display: none; }
 /* The page behind an open lightbox stays put. */
 html.lightbox-open,
 html.lightbox-open body { overflow: hidden; }
@@ -1206,6 +1227,12 @@ html.lightbox-open body { overflow: hidden; }
   .nav-links { gap: 12px; font-size: 0.66rem; letter-spacing: 0.1em; }
   /* Swiping navigates on phones; the indicator would sit on the text. */
   .page-indicator { display: none; }
+}
+/* Short screens (small phones, landscape): keep the content clear of the
+ * fixed nav. After the padding shorthands above so it wins. */
+@media (max-height: 760px) {
+  .hero, .section { padding-top: 88px; padding-bottom: 40px; }
+  .series-card { padding-top: 72px; }
 }
 
 /* ============ REDUCED MOTION ============ */

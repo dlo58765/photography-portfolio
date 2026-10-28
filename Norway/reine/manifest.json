@@ -9,7 +9,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/01.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/4s \u00b7 f/13 \u00b7 ISO 250 \u00b7 24mm",
+      "title": "Feet up by tall windows facing misty granite peaks"
     },
     {
       "thumb": "thumbs/02.jpg",
@@ -19,7 +21,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/02.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/2 \u00b7 ISO 8000 \u00b7 24mm",
+      "title": "Moored boats on a lit pontoon at blue hour"
     },
     {
       "thumb": "thumbs/03.jpg",
@@ -29,7 +33,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/03.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/3.2 \u00b7 ISO 4000 \u00b7 24mm",
+      "title": "Painting of a red cabin and peak beside a window"
     },
     {
       "thumb": "thumbs/04.jpg",
@@ -39,7 +45,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/04.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/20s \u00b7 f/7.1 \u00b7 ISO 100 \u00b7 40mm",
+      "title": "Living room with a drying rack and grey sea view"
     },
     {
       "thumb": "thumbs/05.jpg",
@@ -49,7 +57,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/05.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/6s \u00b7 f/16 \u00b7 ISO 50 \u00b7 28mm",
+      "title": "Red cabins on a rocky point beneath a mist-shrouded peak"
     },
     {
       "thumb": "thumbs/06.jpg",
@@ -59,7 +69,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/06.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/100s \u00b7 f/5.6 \u00b7 ISO 100 \u00b7 64mm",
+      "title": "Lone red house on the shore beneath drifting mist"
     },
     {
       "thumb": "thumbs/07.jpg",
@@ -69,7 +81,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/07.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/100s \u00b7 f/4.5 \u00b7 ISO 100 \u00b7 80mm",
+      "title": "Ochre-yellow cabin gable against a misty mountain"
     },
     {
       "thumb": "thumbs/08.jpg",
@@ -79,7 +93,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/08.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/60s \u00b7 f/4 \u00b7 ISO 100 \u00b7 55mm",
+      "title": "Ochre cabin beneath a cloud-capped peak"
     },
     {
       "thumb": "thumbs/09.jpg",
@@ -89,7 +105,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/09.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/40s \u00b7 f/8 \u00b7 ISO 125 \u00b7 76mm",
+      "title": "Snowy peaks closing in around a grey fjord"
     },
     {
       "thumb": "thumbs/10.jpg",
@@ -99,7 +117,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/10.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/40s \u00b7 f/8 \u00b7 ISO 125 \u00b7 76mm",
+      "title": "Dry grass tufts on the shore, snowy peaks beyond"
     },
     {
       "thumb": "thumbs/11.jpg",
@@ -109,7 +129,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/11.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/4 \u00b7 ISO 250 \u00b7 68mm",
+      "title": "Fish-drying racks and village below snowy mountains, from the road"
     },
     {
       "thumb": "thumbs/12.jpg",
@@ -119,7 +141,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/12.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/2s \u00b7 f/10 \u00b7 ISO 50 \u00b7 28mm",
+      "title": "Surf swirling below red cabins and a granite peak"
     },
     {
       "thumb": "thumbs/13.jpg",
@@ -129,7 +153,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/13.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "0.8s \u00b7 f/10 \u00b7 ISO 250 \u00b7 24mm",
+      "title": "Waves breaking below red cabins in cold blue haze"
     },
     {
       "thumb": "thumbs/14.jpg",
@@ -139,7 +165,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/14.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "0.8s \u00b7 f/10 \u00b7 ISO 250 \u00b7 24mm",
+      "title": "Cabin terrace overlooking a misty harbour and fishing boats"
     },
     {
       "thumb": "thumbs/15.jpg",
@@ -149,7 +177,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/15.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/20s \u00b7 f/4 \u00b7 ISO 50 \u00b7 24mm",
+      "title": "Seated at a harbour-view window with a tablet"
     },
     {
       "thumb": "thumbs/16.jpg",
@@ -159,7 +189,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/16.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/20s \u00b7 f/3.2 \u00b7 ISO 160 \u00b7 24mm",
+      "title": "Framed painting of a harbour below a granite peak"
     },
     {
       "thumb": "thumbs/17.jpg",
@@ -169,7 +201,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/17.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/60s \u00b7 f/6.3 \u00b7 ISO 500 \u00b7 24mm",
+      "title": "Dark bedroom, lamp lit, a blue-hour peak in the window"
     },
     {
       "thumb": "thumbs/18.jpg",
@@ -179,7 +213,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/18.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/160s \u00b7 f/2.8 \u00b7 ISO 6400 \u00b7 31mm",
+      "title": "Dusk falling on red cabins and a granite peak"
     },
     {
       "thumb": "thumbs/19.jpg",
@@ -189,7 +225,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/19.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/100s \u00b7 f/3.2 \u00b7 ISO 12800 \u00b7 35mm",
+      "title": "Lamp-lit red shed at blue hour, bridge behind"
     },
     {
       "thumb": "thumbs/20.jpg",
@@ -199,7 +237,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/20.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/40s \u00b7 f/3.2 \u00b7 ISO 12800 \u00b7 43mm",
+      "title": "Bridge spanning the sound at blue hour, snowy peaks beyond"
     },
     {
       "thumb": "thumbs/21.jpg",
@@ -209,7 +249,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/21.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/20s \u00b7 f/7.1 \u00b7 ISO 400 \u00b7 24mm",
+      "title": "Boardwalk over calm water, red and white houses beyond"
     },
     {
       "thumb": "thumbs/dsc08225.jpg",
@@ -219,7 +261,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/dsc08225.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/100s \u00b7 f/4.5 \u00b7 ISO 500 \u00b7 94mm",
+      "title": "Spiny sea urchin on weathered wooden boards"
     },
     {
       "thumb": "thumbs/dsc08602.jpg",
@@ -229,7 +273,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/dsc08602.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "2s \u00b7 f/1.8 \u00b7 ISO 1600 \u00b7 24mm",
+      "title": "Lit red cabins on the rocks at night"
     },
     {
       "thumb": "thumbs/dsc08606.jpg",
@@ -239,7 +285,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/dsc08606.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "2.5s \u00b7 f/1.6 \u00b7 ISO 1600 \u00b7 24mm",
+      "title": "Waves foaming over rocks below lit cabins at night"
     },
     {
       "thumb": "thumbs/dsc08639.jpg",
@@ -249,7 +297,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc08639.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/20s \u00b7 f/8 \u00b7 ISO 320 \u00b7 24mm",
+      "title": "Granite peak mirrored in the harbour beside moored boats"
     },
     {
       "thumb": "thumbs/dsc08648.jpg",
@@ -259,7 +309,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc08648.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/25s \u00b7 f/11 \u00b7 ISO 200 \u00b7 24mm",
+      "title": "Walker crossing a bridge between snowy peaks, grey sky"
     },
     {
       "thumb": "thumbs/dsc08649.jpg",
@@ -269,7 +321,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/dsc08649.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/25s \u00b7 f/11 \u00b7 ISO 200 \u00b7 24mm",
+      "title": "Red cabins on a rocky point under flat grey light"
     },
     {
       "thumb": "thumbs/dsc08662.jpg",
@@ -279,7 +333,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc08662.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/2s \u00b7 f/13 \u00b7 ISO 50 \u00b7 24mm",
+      "title": "Row of red cabins on stilts along a rocky shore"
     },
     {
       "thumb": "thumbs/dsc08678.jpg",
@@ -289,7 +345,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc08678.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/125s \u00b7 f/4.5 \u00b7 ISO 50 \u00b7 51mm",
+      "title": "Waterfront houses below a sharp snowy peak at dusk"
     },
     {
       "thumb": "thumbs/dsc08679.jpg",
@@ -299,7 +357,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc08679.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/15s \u00b7 f/4.5 \u00b7 ISO 50 \u00b7 50mm",
+      "title": "Watching rain streak the windows over the harbour"
     },
     {
       "thumb": "thumbs/dsc08681.jpg",
@@ -309,7 +369,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc08681.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/13s \u00b7 f/4.5 \u00b7 ISO 50 \u00b7 28mm",
+      "title": "Lounge with a wall of windows onto a rainy harbour"
     },
     {
       "thumb": "thumbs/dsc08683.jpg",
@@ -319,7 +381,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc08683.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/5 \u00b7 ISO 50 \u00b7 121mm",
+      "title": "Wind warning sign reading 6.6 m/s beside a bridge"
     },
     {
       "thumb": "thumbs/dsc08709.jpg",
@@ -329,7 +393,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc08709.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/100s \u00b7 f/5 \u00b7 ISO 100 \u00b7 53mm",
+      "title": "Fish heads drying on wooden racks under grey sky"
     },
     {
       "thumb": "thumbs/dsc08712.jpg",
@@ -339,7 +405,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc08712.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/80s \u00b7 f/4.5 \u00b7 ISO 160 \u00b7 69mm",
+      "title": "Close-up of fish heads hanging from rack poles"
     },
     {
       "thumb": "thumbs/dsc08716.jpg",
@@ -349,7 +417,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc08716.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/5.6 \u00b7 ISO 200 \u00b7 160mm",
+      "title": "Empty drying racks by the water, workers in orange"
     },
     {
       "thumb": "thumbs/dsc08734.jpg",
@@ -359,7 +429,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/dsc08734.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/160s \u00b7 f/5.6 \u00b7 ISO 100 \u00b7 148mm",
+      "title": "Boulder on the shore facing a snow-patched hillside"
     }
   ]
 }

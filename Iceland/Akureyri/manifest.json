@@ -9,7 +9,8 @@
       "shape": "wide",
       "full_w": 2730,
       "md": "thumbs/1.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Looking across the fjord to town lights at dusk"
     },
     {
       "thumb": "thumbs/2.jpg",
@@ -19,7 +20,8 @@
       "shape": "wide",
       "full_w": 2729,
       "md": "thumbs/2.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Harbour lights at blue hour beneath a snowy ridge"
     },
     {
       "thumb": "thumbs/3.jpg",
@@ -29,7 +31,8 @@
       "shape": "wide",
       "full_w": 2730,
       "md": "thumbs/3.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Autumn trees and houses below snow-dusted hills"
     },
     {
       "thumb": "thumbs/4.jpg",
@@ -39,7 +42,8 @@
       "shape": "wide",
       "full_w": 2364,
       "md": "thumbs/4.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Curved timber-clad building at a street corner"
     },
     {
       "thumb": "thumbs/5.jpg",
@@ -49,7 +53,8 @@
       "shape": "portrait",
       "full_w": 1774,
       "md": "thumbs/5.md.jpg",
-      "md_w": 901
+      "md_w": 901,
+      "title": "Black-and-white mural of a girl on a gable wall"
     },
     {
       "thumb": "thumbs/6.jpg",
@@ -59,7 +64,8 @@
       "shape": "portrait",
       "full_w": 1773,
       "md": "thumbs/6.md.jpg",
-      "md_w": 900
+      "md_w": 900,
+      "title": "Heart-shaped red traffic light on a rainy street"
     },
     {
       "thumb": "thumbs/7.jpg",
@@ -69,7 +75,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/7.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Round timber-clad building reflected in still water"
     },
     {
       "thumb": "thumbs/8.jpg",
@@ -79,7 +86,9 @@
       "shape": "wide",
       "full_w": 2560,
       "md": "thumbs/8.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/53s \u00b7 f/2.8 \u00b7 ISO 640 \u00b7 80mm",
+      "title": "Ginger-and-white cat against a green wall"
     },
     {
       "thumb": "thumbs/9.jpg",
@@ -89,7 +98,8 @@
       "shape": "portrait",
       "full_w": 1774,
       "md": "thumbs/9.md.jpg",
-      "md_w": 901
+      "md_w": 901,
+      "title": "Heritage sign with old street photos beside the road"
     },
     {
       "thumb": "thumbs/10.jpg",
@@ -99,7 +109,8 @@
       "shape": "portrait",
       "full_w": 1774,
       "md": "thumbs/10.md.jpg",
-      "md_w": 901
+      "md_w": 901,
+      "title": "Akureyrarkirkja's twin towers above a long stairway"
     }
   ]
 }

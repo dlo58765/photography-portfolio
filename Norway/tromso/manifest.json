@@ -9,7 +9,9 @@
       "shape": "portrait",
       "full_w": 1707,
       "md": "thumbs/01.md.jpg",
-      "md_w": 800
+      "md_w": 800,
+      "shot": "1/320s \u00b7 f/10 \u00b7 ISO 100 \u00b7 31mm",
+      "title": "Snow-covered plateau and frozen lakes from a plane window"
     },
     {
       "thumb": "thumbs/02.jpg",
@@ -19,7 +21,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/02.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/40s \u00b7 f/4.5 \u00b7 ISO 25600 \u00b7 54mm",
+      "title": "City lights across the strait, framed by spruce at dusk"
     },
     {
       "thumb": "thumbs/03.jpg",
@@ -29,7 +33,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/03.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/100s \u00b7 f/1.4 \u00b7 ISO 1250 \u00b7 24mm",
+      "title": "Snowdrift and spruce outside a window at blue hour"
     },
     {
       "thumb": "thumbs/04.jpg",
@@ -39,7 +45,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/04.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/80s \u00b7 f/4.5 \u00b7 ISO 400 \u00b7 79mm",
+      "title": "Figure at a window facing a snowy mountainside"
     },
     {
       "thumb": "thumbs/05.jpg",
@@ -49,7 +57,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/05.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/1600s \u00b7 f/8 \u00b7 ISO 400 \u00b7 200mm",
+      "title": "Snowy summit with buildings, seen through spruce branches"
     },
     {
       "thumb": "thumbs/06.jpg",
@@ -59,7 +69,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/06.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/16 \u00b7 ISO 400 \u00b7 64mm",
+      "title": "Figure in a beanie overlooking the Arctic Cathedral and bridge"
     },
     {
       "thumb": "thumbs/07.jpg",
@@ -69,7 +81,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/07.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/400s \u00b7 f/10 \u00b7 ISO 400 \u00b7 58mm",
+      "title": "Arctic Cathedral and bridge below snowy hills in low sun"
     },
     {
       "thumb": "thumbs/08.jpg",
@@ -79,7 +93,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/08.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/320s \u00b7 f/5.6 \u00b7 ISO 100 \u00b7 76mm",
+      "title": "City across the strait from high above in low sun"
     },
     {
       "thumb": "thumbs/09.jpg",
@@ -89,7 +105,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/09.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/7.1 \u00b7 ISO 400 \u00b7 105mm",
+      "title": "Wind-blown viewpoint bench above Troms\u00f8 at dusk"
     },
     {
       "thumb": "thumbs/10.jpg",
@@ -99,7 +117,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/10.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/100s \u00b7 f/7.1 \u00b7 ISO 400 \u00b7 110mm",
+      "title": "Hooded hiker with camera overlooking the strait and peaks"
     }
   ]
 }

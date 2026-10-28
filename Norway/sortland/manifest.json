@@ -9,7 +9,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc08993.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/4.5 \u00b7 ISO 12800 \u00b7 109mm",
+      "title": "Rooftops at dusk below a pink-lit snowy range"
     },
     {
       "thumb": "thumbs/dsc08994.jpg",
@@ -19,7 +21,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc08994.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/3.2 \u00b7 ISO 6400 \u00b7 42mm",
+      "title": "Blue-fronted shopping centre and car park at nightfall"
     },
     {
       "thumb": "thumbs/dsc09003.jpg",
@@ -29,7 +33,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/dsc09003.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/60s \u00b7 f/4 \u00b7 ISO 12800 \u00b7 28mm",
+      "title": "Lit quay and moored boats on Sortlandsundet at blue hour"
     },
     {
       "thumb": "thumbs/dsc09013.jpg",
@@ -39,7 +45,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/dsc09013.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/25s \u00b7 f/6.3 \u00b7 ISO 640 \u00b7 24mm",
+      "title": "Breakfast plate of croissant, ham and beetroot"
     },
     {
       "thumb": "thumbs/dsc09039.jpg",
@@ -49,7 +57,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc09039.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/125s \u00b7 f/9 \u00b7 ISO 100 \u00b7 28mm",
+      "title": "Seabird gliding past the window above harbour and peaks"
     },
     {
       "thumb": "thumbs/dsc09058.jpg",
@@ -59,7 +69,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc09058.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/10 \u00b7 ISO 100 \u00b7 36mm",
+      "title": "Swedish-flagged ship at the quay under broken cloud"
     },
     {
       "thumb": "thumbs/dsc09060.jpg",
@@ -69,7 +81,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc09060.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/250s \u00b7 f/5.6 \u00b7 ISO 100 \u00b7 125mm",
+      "title": "Hooded figure on the pier between fishing boats"
     },
     {
       "thumb": "thumbs/dsc09071.jpg",
@@ -79,7 +93,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc09071.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/100s \u00b7 f/10 \u00b7 ISO 100 \u00b7 141mm",
+      "title": "Cruise ship with a painted bow, the long bridge beyond"
     },
     {
       "thumb": "thumbs/dsc09094.jpg",
@@ -89,7 +105,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc09094.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/100s \u00b7 f/10 \u00b7 ISO 100 \u00b7 200mm",
+      "title": "Dark sculpture with a diamond opening below snowy mountains"
     },
     {
       "thumb": "thumbs/dsc09099.jpg",
@@ -99,7 +117,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc09099.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/100s \u00b7 f/4.5 \u00b7 ISO 400 \u00b7 93mm",
+      "title": "Snowy mountains across the water from a dim bedroom"
     },
     {
       "thumb": "thumbs/dsc09103.jpg",
@@ -109,7 +129,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/dsc09103.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/3.5 \u00b7 ISO 5000 \u00b7 43mm",
+      "title": "Blue twilight peaks in a dark hotel-room window"
     }
   ]
 }

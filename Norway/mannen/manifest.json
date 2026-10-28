@@ -9,7 +9,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/01.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/125s \u00b7 f/9 \u00b7 ISO 100 \u00b7 36mm",
+      "title": "Harbour warehouse on wooden piles below a sunlit peak"
     },
     {
       "thumb": "thumbs/02.jpg",
@@ -19,7 +21,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/02.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/640s \u00b7 f/13 \u00b7 ISO 1000 \u00b7 142mm",
+      "title": "Hooded walker on the porch of a red cabin"
     },
     {
       "thumb": "thumbs/03.jpg",
@@ -29,7 +33,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/03.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/8 \u00b7 ISO 160 \u00b7 175mm",
+      "title": "Red trawler at the quay, small boat heading in"
     },
     {
       "thumb": "thumbs/04.jpg",
@@ -39,7 +45,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/04.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/500s \u00b7 f/10 \u00b7 ISO 640 \u00b7 28mm",
+      "title": "Frozen lake below snow-covered peaks, seen from the car"
     },
     {
       "thumb": "thumbs/05.jpg",
@@ -49,7 +57,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/05.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/500s \u00b7 f/11 \u00b7 ISO 640 \u00b7 119mm",
+      "title": "Wind-whipped sea and pale sand beneath snowy peaks"
     },
     {
       "thumb": "thumbs/06.jpg",
@@ -59,7 +69,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/06.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/10 \u00b7 ISO 100 \u00b7 33mm",
+      "title": "Snow patches on winter grass above a turquoise bay"
     },
     {
       "thumb": "thumbs/07.jpg",
@@ -69,7 +81,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/07.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/9 \u00b7 ISO 100 \u00b7 84mm",
+      "title": "Snow-streaked mountain above a valley settlement in low sun"
     },
     {
       "thumb": "thumbs/08.jpg",
@@ -79,17 +93,21 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/08.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/10 \u00b7 ISO 100 \u00b7 28mm",
+      "title": "Low sun glittering on the bay beside a rocky shore"
     },
     {
-      "thumb": "thumbs/09 - \u8907\u88fd.jpg",
-      "full": "09 - \u8907\u88fd.jpg",
+      "thumb": "thumbs/09.jpg",
+      "full": "09.jpg",
       "w": 1600,
       "h": 1069,
       "shape": "wide",
       "full_w": 1616,
-      "md": "thumbs/09 - \u8907\u88fd.md.jpg",
-      "md_w": 1200
+      "md": "thumbs/09.md.jpg",
+      "md_w": 1200,
+      "shot": "1/2500s \u00b7 f/5 \u00b7 ISO 640 \u00b7 117mm",
+      "title": "Grassy headland over choppy water and distant mountains"
     },
     {
       "thumb": "thumbs/10.jpg",
@@ -99,7 +117,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/10.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/8000s \u00b7 f/4 \u00b7 ISO 640 \u00b7 30mm",
+      "title": "Russet grass slope above the bay under drifting clouds"
     },
     {
       "thumb": "thumbs/11.jpg",
@@ -109,7 +129,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/11.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/400s \u00b7 f/5.6 \u00b7 ISO 100 \u00b7 77mm",
+      "title": "Moss and low shrubs on a ledge above rough water"
     },
     {
       "thumb": "thumbs/12.jpg",
@@ -119,7 +141,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/12.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/200s \u00b7 f/5.6 \u00b7 ISO 125 \u00b7 200mm",
+      "title": "Hikers on a snow-patched trail beneath a rock wall"
     },
     {
       "thumb": "thumbs/13.jpg",
@@ -129,7 +153,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/13.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/250s \u00b7 f/9 \u00b7 ISO 100 \u00b7 105mm",
+      "title": "Sunlit red and yellow houses below a sheer rock face"
     },
     {
       "thumb": "thumbs/14.jpg",
@@ -139,7 +165,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/14.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/100s \u00b7 f/7.1 \u00b7 ISO 100 \u00b7 53mm",
+      "title": "Farmhouses at the foot of a snow-streaked mountain"
     },
     {
       "thumb": "thumbs/15.jpg",
@@ -149,7 +177,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/15.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/9 \u00b7 ISO 100 \u00b7 62mm",
+      "title": "Long shadows across farmland running down to the sea"
     },
     {
       "thumb": "thumbs/16.jpg",
@@ -159,7 +189,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/16.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/160s \u00b7 f/6.3 \u00b7 ISO 100 \u00b7 107mm",
+      "title": "Car on a winding road through farmland to the sea"
     },
     {
       "thumb": "thumbs/17.jpg",
@@ -169,7 +201,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/17.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/100s \u00b7 f/5.6 \u00b7 ISO 100 \u00b7 75mm",
+      "title": "Hiker resting on a rock, looking down to the sea"
     },
     {
       "thumb": "thumbs/18.jpg",
@@ -179,7 +213,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/18.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/125s \u00b7 f/8 \u00b7 ISO 100 \u00b7 28mm",
+      "title": "Snowy trail between boulders, the open sea beyond"
     },
     {
       "thumb": "thumbs/19.jpg",
@@ -189,7 +225,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/19.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/8 \u00b7 ISO 100 \u00b7 82mm",
+      "title": "Pale light breaking over snowy peaks and a dark island"
     },
     {
       "thumb": "thumbs/20.jpg",
@@ -199,7 +237,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/20.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/160s \u00b7 f/10 \u00b7 ISO 100 \u00b7 52mm",
+      "title": "Shafts of sunlight falling on a bay below snowy hills"
     },
     {
       "thumb": "thumbs/21.jpg",
@@ -209,7 +249,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/21.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/5.6 \u00b7 ISO 100 \u00b7 137mm",
+      "title": "Line of hikers crossing snowfields past a large boulder"
     },
     {
       "thumb": "thumbs/22.jpg",
@@ -219,7 +261,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/22.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/160s \u00b7 f/5.6 \u00b7 ISO 250 \u00b7 149mm",
+      "title": "Hikers with poles climbing a snowy trail above the beach"
     },
     {
       "thumb": "thumbs/23.jpg",
@@ -229,7 +273,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/23.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/1000s \u00b7 f/5.6 \u00b7 ISO 1600 \u00b7 200mm",
+      "title": "Gulls wheeling around a red trawler at dusk"
     },
     {
       "thumb": "thumbs/24.jpg",
@@ -239,7 +285,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/24.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/50s \u00b7 f/8 \u00b7 ISO 640 \u00b7 56mm",
+      "title": "Red cabins on a stone seawall below a rocky peak"
     },
     {
       "thumb": "thumbs/25.jpg",
@@ -249,7 +297,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/25.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/160s \u00b7 f/4 \u00b7 ISO 250 \u00b7 50mm",
+      "title": "Smooth rock shore and pools at dusk, snowy peak beyond"
     },
     {
       "thumb": "thumbs/26.jpg",
@@ -259,7 +309,9 @@
       "shape": "portrait",
       "full_w": 1080,
       "md": "thumbs/26.md.jpg",
-      "md_w": 802
+      "md_w": 802,
+      "shot": "1/4s \u00b7 f/4.5 \u00b7 ISO 500 \u00b7 24mm",
+      "title": "Glass fishing floats wrapped in rope netting"
     },
     {
       "thumb": "thumbs/27.jpg",
@@ -269,7 +321,9 @@
       "shape": "wide",
       "full_w": 1616,
       "md": "thumbs/27.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "shot": "1/60s \u00b7 f/4 \u00b7 ISO 200 \u00b7 24mm",
+      "title": "Kitchen window looking out on red cabins"
     }
   ]
 }

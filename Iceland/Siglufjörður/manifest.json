@@ -9,7 +9,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/1.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Fishing boats in the sunlit harbour below snowy peaks"
     },
     {
       "thumb": "thumbs/2.jpg",
@@ -19,7 +20,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/2.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Fresh snow on a ridge rising straight from the fjord"
     },
     {
       "thumb": "thumbs/3.jpg",
@@ -29,7 +31,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/3.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Orange boat moored by red and yellow wooden houses"
     },
     {
       "thumb": "thumbs/4.jpg",
@@ -39,7 +42,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/4.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Long snow-covered range across deep blue water"
     },
     {
       "thumb": "thumbs/5.jpg",
@@ -49,7 +53,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/5.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Road curving along a lagoon toward snowy mountains"
     },
     {
       "thumb": "thumbs/6.jpg",
@@ -59,7 +64,8 @@
       "shape": "wide",
       "full_w": 2508,
       "md": "thumbs/6.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Bend signs above a causeway and a calm lagoon"
     },
     {
       "thumb": "thumbs/7.jpg",
@@ -69,7 +75,8 @@
       "shape": "wide",
       "full_w": 2364,
       "md": "thumbs/7.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Dashboard view of a roadside photographer and snowy shore"
     },
     {
       "thumb": "thumbs/8.jpg",
@@ -79,7 +86,8 @@
       "shape": "wide",
       "full_w": 2730,
       "md": "thumbs/8.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Guardrailed road winding along the fjord in hazy light"
     },
     {
       "thumb": "thumbs/9.jpg",
@@ -89,7 +97,8 @@
       "shape": "wide",
       "full_w": 2730,
       "md": "thumbs/9.md.jpg",
-      "md_w": 1200
+      "md_w": 1200,
+      "title": "Road bending around a dark hillside above the fjord"
     }
   ]
 }
